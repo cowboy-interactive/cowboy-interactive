@@ -25,10 +25,10 @@ export default function Home() {
         all={
           "margin: 50px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
-        medium={"width: 90vw; align-items: flex-start;"}
+        medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
       >
-        <Container small={"margin-bottom: 60px;"}>
+        <Container small={"margin-bottom: 60px; align-items: center;"} xsmall={"align-items: flex-start;"}>
           <H1
             all={"margin: 0 0 40px 0; maxWidth: 800px;"}
             large={"font-size: 48px;"}

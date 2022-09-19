@@ -31,20 +31,21 @@ export const ContactCard = ({ children, all, large, medium, small }) => {
 };
 
 const Cont = styled.div`
-  width: 60vw;
   display: grid;
-  justify-content: space-between;
-  align-items: flex-start;
   grid-template-columns: 2fr 2fr 2fr;
   grid-gap: 20px;
+  width: 60vw;
 
   @media (max-width: ${sizes.medium}) {
     width: 80vw;
   }
   @media (max-width: ${sizes.small}) {
-    width: 90vw;
+    width: auto;
     grid-template-columns: 2fr;
     grid-gap: 40px;
+  }
+  @media (max-width: ${sizes.xsmall}) {
+    width: 90vw;
   }
 `;
 
@@ -63,13 +64,13 @@ const Card = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
   border-radius: 10px;
   cursor: pointer;
+  width: auto; 
 
   @media (max-width: ${sizes.small}) {
-    width: 100%;
     justify-content: flex-start;
+    width: 100%; 
   }
 `;
 
