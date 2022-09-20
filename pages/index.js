@@ -119,7 +119,7 @@ export default function Home() {
         small={"width: 90vw; flex-direction: column-reverse;"}
       >
         <Img src="/quality.jpg" />
-        <Container
+{/*         <Container
           all={"margin:0 0 0 40px;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
@@ -138,7 +138,7 @@ export default function Home() {
               Get a Quote
             </Button>
           </Container>
-        </Container>
+        </Container> */}
       </Section>
 
       <Section
