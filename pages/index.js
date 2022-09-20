@@ -111,7 +111,7 @@ export default function Home() {
         </Container>
       </Section>
 
-{/*       <Section
+      <Section
         all={
           "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
@@ -134,12 +134,12 @@ export default function Home() {
             vitae.
           </Text>
           <Container all={"flex-direction: row"}>
-            <Button all={`background: ${themes.button}; color: #fff;`}>
+{/*             <Button all={`background: ${themes.button}; color: #fff;`}>
               Get a Quote
-            </Button>
+            </Button> */}
           </Container>
         </Container>
-      </Section> */}
+      </Section>
 
       <Section
         all={
