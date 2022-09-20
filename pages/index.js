@@ -130,7 +130,7 @@ export default function Home() {
           </H2> */}
           <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Why Us</H3>
           <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
-            An exceptional quality <br /> that can't be beaten
+            An exceptional quality <br /> that cant be beaten
           </H2>
           <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
