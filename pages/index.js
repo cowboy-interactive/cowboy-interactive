@@ -11,7 +11,7 @@ import { H3 } from "../comps/Text/H3";
 import { ContactCard } from "../comps/ContactCard/ContactCard";
 import { Services } from "../comps/Services/Services";
 import { Testimonials } from "../comps/Testimonials/Testimonials";
-/* import ContactForm from "../comps/ContactForm"; */
+import ContactForm from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
 
 export default function Home() {
@@ -89,7 +89,7 @@ export default function Home() {
         <Img src="/home.jpg" />
       </Section>
 
-      <Section
+{/*       <Section
         all={
           "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
@@ -170,8 +170,8 @@ export default function Home() {
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
       >
-{/*         <ContactForm color={themes[theme]} /> */}
-      </Section>
+        <ContactForm color={themes[theme]} />
+      </Section> */}
     </Container>
   );
 }

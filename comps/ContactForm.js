@@ -1,4 +1,4 @@
-/* import styled from "styled-components";
+import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { H2 } from "./Text/H2";
 import { Button } from "./Button";
@@ -135,4 +135,3 @@ const InputUI = styled.input`
   color: ${(props) => props.color.secondary};
   border-bottom: 1px solid ${(props) => props.color.secondary};
 `;
- */
