@@ -13,6 +13,7 @@ import { Services } from "../comps/Services/Services";
 import { Testimonials } from "../comps/Testimonials/Testimonials";
 import ContactForm from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
+import { Gallery } from "../comps/Gallery/Gallery";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -42,16 +43,21 @@ export default function Home() {
           >
             We provide effective <br></br> contracting services
           </H1>
-          <Text all={"margin: 0 0 40px 0; max-width: 530px;"}>
+          <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.
           </Text>
-          <Container all={"flex-direction: row"} xsmall={"flex-direction: column"}>
+          <Container
+            all={"flex-direction: row"}
+            xsmall={"flex-direction: column"}
+          >
             <Button all={`background: ${themes.button}; color: #fff;`}>
               Get a Quote
             </Button>
-            <Button all={"margin: 0 0 0 20px;"} xsmall={"margin: 20px 0 0 0;"}>Our Services</Button>
+            <Button all={"margin: 0 0 0 20px;"} xsmall={"margin: 20px 0 0 0;"}>
+              Our Services
+            </Button>
           </Container>
         </Container>
         <Img src="/interior.jpg" />
@@ -63,7 +69,7 @@ export default function Home() {
 
       <Section
         all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
+          "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
@@ -91,7 +97,7 @@ export default function Home() {
 
       <Section
         all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
+          "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
@@ -113,7 +119,7 @@ export default function Home() {
 
       <Section
         all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
+          "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column-reverse;"}
@@ -143,7 +149,7 @@ export default function Home() {
 
       <Section
         all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
+          "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
@@ -165,7 +171,30 @@ export default function Home() {
 
       <Section
         all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
+          "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
+        }
+        medium={"width: 90vw; align-items: center;"}
+        small={"width: 90vw; flex-direction: column;"}
+      >
+        <Container
+          all={"align-items: space-between; "}
+          small={
+            "margin-bottom: 60px; align-items: center; text-align: center;"
+          }
+          xsmall={"align-items: flex-start; text-align: left;"}
+        >
+          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Past Projects</H3>
+          <H2 all={"margin: 0 0 60px 0; max-width: 500px;"}>
+            Our project results speak <br /> for themselves
+          </H2>
+          <Gallery />
+        </Container>
+ 
+      </Section>
+
+      <Section
+        all={
+          "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
