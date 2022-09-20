@@ -9,9 +9,16 @@ import { useTheme } from "../../utils/provider";
 export const Navbar = ({ children, all, large, medium, small }) => {
   const { theme } = useTheme();
   return (
-    <NavbarUI all={all} large={large} medium={medium} small={small}>
+    <NavbarUI
+      all={all}
+      large={large}
+      medium={medium}
+      small={small}
+      theme={theme}
+      themes={themes}
+    >
       <LogoUI>
-        <Link href="/">Logo</Link>
+        <Link href="/">contractor pro™</Link>
       </LogoUI>
       <NavUI>
         <ThemeSwitch all={"margin-left: 40px;"} />
@@ -23,7 +30,7 @@ export const Navbar = ({ children, all, large, medium, small }) => {
           );
         })}
         <Button
-          all={`background: ${themes.highlight}; color: #fff; margin-left: 40px`}
+          all={`background: ${themes.button}; color: #fff; margin-left: 40px`}
         >
           Get a Quote
         </Button>
@@ -37,6 +44,10 @@ const NavbarUI = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: ${(props) => themes[props.theme].primary};
 
   ${(props) => props.all};
 
@@ -56,12 +67,18 @@ const NavbarUI = styled.div`
 const LogoUI = styled.div`
   display: flex;
   justify-content: flex-start;
+  font-weight: 700;
+  font-size: 24px;
 `;
 
 const NavUI = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: ${sizes.small}) {
+    display: none;
+  }
 `;
 
 const LinkUI = styled.div`

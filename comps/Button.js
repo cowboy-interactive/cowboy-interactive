@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { sizes, themes } from "../utils/variables";
 import { useTheme } from "../utils/provider";
 
-export const Button = ({ children, all, style }) => {
+export const Button = ({ children, all, style, type="" }) => {
   const { theme } = useTheme();
 
   return (
     <ButtonUI
+      type={type}
       style={style}
       all={all}
       background={themes[theme].secondary}
@@ -17,7 +18,7 @@ export const Button = ({ children, all, style }) => {
   );
 };
 
-const ButtonUI = styled.div`
+const ButtonUI = styled.button`
   width: 200px;
   height: 40px;
   border-radius: 50px;
@@ -30,6 +31,7 @@ const ButtonUI = styled.div`
   color: ${(props) => props.color};
   transition: 0.2s ease;
   font-weight: 500;
+  font-size 16px;
 
   ${(props) => props.all};
 

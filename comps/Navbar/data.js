@@ -11,4 +11,8 @@ export const links = [
     text: "Services",
     url: "/"
   },
+  {
+    text: "Work",
+    url: "/"
+  },
 ];
