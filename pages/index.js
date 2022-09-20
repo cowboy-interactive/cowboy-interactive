@@ -89,7 +89,7 @@ export default function Home() {
         <Img src="/home.jpg" />
       </Section>
 
-{/*       <Section
+      <Section
         all={
           "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
@@ -111,7 +111,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section
+{/*       <Section
         all={
           "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
         }
@@ -139,7 +139,7 @@ export default function Home() {
             </Button>
           </Container>
         </Container>
-      </Section>
+      </Section> */}
 
       <Section
         all={
@@ -171,7 +171,7 @@ export default function Home() {
         small={"width: 90vw; flex-direction: column;"}
       >
         <ContactForm color={themes[theme]} />
-      </Section> */}
+      </Section>
     </Container>
   );
 }
