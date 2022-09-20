@@ -124,7 +124,7 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Why Us</H3>
+          <H3 all={"margin: 0 0 20px 0; maxWidth: 800px;"}>Why Us</H3>
           <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
             An exceptional quality <br /> that can't be beaten
           </H2>
@@ -134,9 +134,9 @@ export default function Home() {
             vitae.
           </Text>
           <Container all={"flex-direction: row"}>
-{/*             <Button all={`background: ${themes.button}; color: #fff;`}>
+            <Button all={`background: ${themes.button}; color: #fff;`}>
               Get a Quote
-            </Button> */}
+            </Button>
           </Container>
         </Container>
       </Section>
