@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { sizes, themes } from "../utils/variables";
 import { useTheme } from "../utils/provider";
 
-export const Button = ({ children, all, style, type="" }) => {
+export const Button = ({ children, all, style, type="", large, medium, small, xsmall }) => {
   const { theme } = useTheme();
 
   return (
@@ -10,6 +10,10 @@ export const Button = ({ children, all, style, type="" }) => {
       type={type}
       style={style}
       all={all}
+      large={large}
+      medium={medium}
+      small={small}
+      xsmall={xsmall}
       background={themes[theme].secondary}
       color={themes[theme].primary}
     >
@@ -45,6 +49,10 @@ const ButtonUI = styled.button`
 
   @media (max-width: ${sizes.small}) {
     ${(props) => props.small};
+  }
+
+  @media (max-width: ${sizes.xsmall}) {
+    ${(props) => props.xsmall};
   }
 
   &:hover {

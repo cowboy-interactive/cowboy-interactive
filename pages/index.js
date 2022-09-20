@@ -42,16 +42,16 @@ export default function Home() {
           >
             We provide effective <br></br> contracting services
           </H1>
-          <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
+          <Text all={"margin: 0 0 40px 0; max-width: 530px;"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.
           </Text>
-          <Container all={"flex-direction: row"}>
+          <Container all={"flex-direction: row"} xsmall={"flex-direction: column"}>
             <Button all={`background: ${themes.button}; color: #fff;`}>
               Get a Quote
             </Button>
-            <Button all={"margin-left: 20px;"}>Our Services</Button>
+            <Button all={"margin: 0 0 0 20px;"} xsmall={"margin: 20px 0 0 0;"}>Our Services</Button>
           </Container>
         </Container>
         <Img src="/interior.jpg" />
@@ -124,10 +124,6 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          {/*           <H3 all={"margin: 0 0 20px 0; max-width: 800px;"}>Why Us</H3>
-          <H2 all={"margin: 0 0 40px 0; max-width: 800px;"}>
-            An exceptional quality <br /> that can't be beaten
-          </H2> */}
           <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Why Us</H3>
           <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
             An exceptional quality <br /> that cant be beaten
