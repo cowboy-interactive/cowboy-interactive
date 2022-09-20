@@ -124,10 +124,10 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={"margin: 0 0 20px 0; max-width: 800px;"}>Why Us</H3>
+{/*           <H3 all={"margin: 0 0 20px 0; max-width: 800px;"}>Why Us</H3>
           <H2 all={"margin: 0 0 40px 0; max-width: 800px;"}>
             An exceptional quality <br /> that can't be beaten
-          </H2>
+          </H2> */}
           <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
