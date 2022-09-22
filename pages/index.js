@@ -14,16 +14,13 @@ import { Testimonials } from "../comps/Testimonials/Testimonials";
 import ContactForm from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
 import { Gallery } from "../comps/Gallery/Gallery";
+import { Footer } from "../comps/Footer/Footer";
 
 export default function Home() {
   const { theme } = useTheme();
 
   return (
     <Container all={"align-items: center"}>
-      <Navbar
-        all={"height: 80px; width: 80vw; max-width: 1600px; "}
-        medium={"width: 90vw;"}
-      />
       <Section
         all={
           "margin: 130px 0 50px 0; width: 80vw; max-width: 1600px; align-items: center;"
@@ -52,7 +49,10 @@ export default function Home() {
             all={"flex-direction: row"}
             xsmall={"flex-direction: column"}
           >
-            <Button all={`background: ${themes.button}; color: #fff;`}>
+            <Button
+              href={"/contact"}
+              all={`background: ${themes.button}; color: #fff;`}
+            >
               Get a Quote
             </Button>
             <Button all={"margin: 0 0 0 20px;"} xsmall={"margin: 20px 0 0 0;"}>
@@ -64,7 +64,13 @@ export default function Home() {
       </Section>
 
       <Section all={"margin: 50px 0;"}>
-        <ContactCard />
+        <ContactCard
+          all={"width: 60vw; justify-content: space-between;"}
+          medium={"width: 80vw"}
+          small={"flex-direction: column; align-items: center; "}
+          xsmall={"align-items: flex-start; "}
+
+        />
       </Section>
 
       <Section
@@ -140,7 +146,10 @@ export default function Home() {
             vitae.
           </Text>
           <Container all={"flex-direction: row"}>
-            <Button all={`background: ${themes.button}; color: #fff;`}>
+            <Button
+              href={"/contact"}
+              all={`background: ${themes.button}; color: #fff;`}
+            >
               Get a Quote
             </Button>
           </Container>
@@ -157,7 +166,7 @@ export default function Home() {
         <Container
           all={"align-items: center; text-align: center;"}
           small={
-            "margin-bottom: 60px; align-items: center; text-align: center;"
+            "align-items: center; text-align: center;"
           }
           xsmall={"align-items: flex-start; text-align: left;"}
         >
@@ -179,7 +188,7 @@ export default function Home() {
         <Container
           all={"align-items: space-between; "}
           small={
-            "margin-bottom: 60px; align-items: center; text-align: center;"
+            "align-items: center; text-align: center;"
           }
           xsmall={"align-items: flex-start; text-align: left;"}
         >
@@ -189,7 +198,6 @@ export default function Home() {
           </H2>
           <Gallery />
         </Container>
- 
       </Section>
 
       <Section

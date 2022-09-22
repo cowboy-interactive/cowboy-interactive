@@ -9,7 +9,15 @@ import { Container } from "../Container";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 
-export const ContactCard = ({ children, all, large, medium, small, xsmall }) => {
+export const ContactCard = ({
+  children,
+  all,
+  large,
+  medium,
+  small,
+  xsmall,
+  color,
+}) => {
   const { theme } = useTheme();
   return (
     <Cont all={all} large={large} medium={medium} small={small} xsmall={xsmall}>
@@ -20,7 +28,9 @@ export const ContactCard = ({ children, all, large, medium, small, xsmall }) => 
               <Icon themes={themes}>{item.icon}</Icon>
               <Column>
                 <H3 all={"margin: 0 0 5px 0;"}>{item.head}</H3>
-                <Text all={"width: 170px;"}>{item.text}</Text>
+                <Text color={color} all={"width: 170px;"}>
+                  {item.text}
+                </Text>
               </Column>
             </Card>
           </a>
@@ -31,27 +41,20 @@ export const ContactCard = ({ children, all, large, medium, small, xsmall }) => 
 };
 
 const Cont = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
-  grid-gap: 20px;
-  width: 60vw;
+  display: flex;
+  grid-gap: 40px;
 
-  ${props => props.all};
+  ${(props) => props.all};
 
   @media (max-width: ${sizes.medium}) {
-    width: 80vw;
-    ${props => props.medium};
+    ${(props) => props.medium};
   }
   @media (max-width: ${sizes.small}) {
-    width: auto;
-    grid-template-columns: 2fr;
-    grid-gap: 40px;
-    ${props => props.small};
+    ${(props) => props.small};
   }
   @media (max-width: ${sizes.xsmall}) {
     width: 90vw;
-    grid-template-columns: 2fr;
-    ${props => props.xsmall};
+    ${(props) => props.xsmall};
   }
 `;
 
@@ -61,9 +64,16 @@ const Icon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${(props) => props.themes.highlight};
+  background: ${(props) => props.themes.button};
   color: white;
   border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease;
+
+  &:hover {
+    filter: brightness(120%);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
+  }
 `;
 
 const Card = styled.div`
@@ -71,11 +81,9 @@ const Card = styled.div`
   justify-content: center;
   align-items: flex-start;
   cursor: pointer;
-  width: auto;
 
   @media (max-width: ${sizes.small}) {
     justify-content: flex-start;
-    width: 100%;
   }
 `;
 

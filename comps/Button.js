@@ -1,12 +1,31 @@
 import styled from "styled-components";
 import { sizes, themes } from "../utils/variables";
 import { useTheme } from "../utils/provider";
+import { useRouter } from "next/router";
 
-export const Button = ({ children, all, style, type="", large, medium, small, xsmall }) => {
+export const Button = ({
+  children,
+  all,
+  style,
+  type = "",
+  large,
+  medium,
+  small,
+  xsmall,
+  href = "",
+}) => {
   const { theme } = useTheme();
+
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(href);
+  };
 
   return (
     <ButtonUI
+      onClick={handleClick}
       type={type}
       style={style}
       all={all}
@@ -36,6 +55,7 @@ const ButtonUI = styled.button`
   transition: 0.2s ease;
   font-weight: 500;
   font-size 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 
   ${(props) => props.all};
 
@@ -57,6 +77,6 @@ const ButtonUI = styled.button`
 
   &:hover {
     filter: brightness(120%);
-    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
   }
 `;

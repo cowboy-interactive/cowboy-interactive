@@ -5,8 +5,9 @@ import { Button } from "./Button";
 import { themes } from "../utils/variables";
 import { ContactCard } from "./ContactCard/ContactCard";
 import { H3 } from "./Text/H3";
+import { Text } from "./Text/Text";
 
-export default function ContactForm({ dark, setDark, color }) {
+export default function ContactForm({ dark, setDark, color, contact = false }) {
   const sendEmail = (e) => {
     e.preventDefault();
     window.scrollTo(0, 0);
@@ -28,15 +29,17 @@ export default function ContactForm({ dark, setDark, color }) {
     <ContainerUI>
       <ColumnUI>
         <H2 all={"margin: 0 0 20px 0;"}>Get in touch.</H2>
-        <TextUI>
+        <Text all={"max-width: 500px;"}>
           Let us know what you would like to work on. We will get back to you as
           soon as we can!
-        </TextUI>
-        <ContactCard
-          all={"grid-template-columns: 2fr; grid-gap: 40px; width: 0vw;"}
-          medium={"grid-template-columns: 2fr; grid-gap: 40px; width: 0vw;"}
-          small={"grid-template-columns: 2fr; grid-gap: 40px; width: 0vw;"}
-        />
+        </Text>
+        {contact && (
+          <ContactCard
+            all={"grid-template-columns: 2fr; grid-gap: 40px; width: 0vw;"}
+            medium={"grid-template-columns: 2fr; grid-gap: 40px; width: 0vw;"}
+            small={"grid-template-columns: 2fr; grid-gap: 40px; width: 0vw;"}
+          />
+        )}
       </ColumnUI>
 
       <FormUI onSubmit={sendEmail}>
@@ -116,7 +119,6 @@ const FormUI = styled.form`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-
 `;
 
 const InputUI = styled.input`

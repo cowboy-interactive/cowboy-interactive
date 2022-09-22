@@ -13,11 +13,15 @@ export const Services = ({ all, large, medium, small }) => {
         return (
           <Link href={item.url} target={item.target}>
             <Card>
-              <Image src={item.image} width={700} height={450} />
+              <ImageCont>
+                <Image src={item.image} width={700} height={450} />
+              </ImageCont>
               <Column>
                 <Icon themes={themes}>{item.icon}</Icon>
                 <H3 all={"margin: 0 0 20px 0"}>{item.head}</H3>
-                <Text all={"max-width: 600px; text-align: left;"}>{item.text}</Text>
+                <Text all={"max-width: 600px; text-align: left;"}>
+                  {item.text}
+                </Text>
               </Column>
             </Card>
           </Link>
@@ -30,7 +34,7 @@ export const Services = ({ all, large, medium, small }) => {
 const Cont = styled.div`
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
-  grid-gap: 60px;
+  grid-gap: 20px;
   width: 100%;
 
   @media (max-width: ${sizes.small}) {
@@ -54,12 +58,20 @@ const Card = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  border-radius: 10px;
-  cursor: pointer;
   flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.2s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
 
+`;
 
-
+const ImageCont = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+  transition: 0.2s ease;
 
 `;
 
@@ -71,7 +83,8 @@ const Column = styled.div`
   position: relative;
   top: -25px;
   z-index: 100;
-  padding: 0 20px;
+  padding: 0 40px 15px 40px;
+  
 
   @media (max-width: ${sizes.small}) {
     justify-content: flex-start;

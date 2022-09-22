@@ -4,21 +4,16 @@ import Image from "next/image";
 
 export const Img = ({ src, all, large, medium, small }) => {
   return (
-    <Cont
-      src={src}
-      all={all}
-      large={large}
-      medium={medium}
-      small={small}
-      width={700}
-      height={450}
-    />
+    <Cont all={all} large={large} medium={medium} small={small}>
+      <Image src={src} width={700} height={450} />
+    </Cont>
   );
 };
 
-const Cont = styled(Image)`
+const Cont = styled.div`
   ${(props) => props.all};
-
+  display: flex;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   @media (max-width: ${sizes.large}) {
     ${(props) => props.large};
   }

@@ -5,14 +5,14 @@ export const links = [
   },
   {
     text: "About",
-    url: "/"
+    url: "/about"
   },
   {
     text: "Services",
-    url: "/"
+    url: "/services"
   },
   {
     text: "Work",
-    url: "/"
+    url: "/work"
   },
 ];

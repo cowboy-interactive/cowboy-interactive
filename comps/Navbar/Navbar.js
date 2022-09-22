@@ -8,46 +8,57 @@ import { useTheme } from "../../utils/provider";
 
 export const Navbar = ({ children, all, large, medium, small }) => {
   const { theme } = useTheme();
+
   return (
-    <NavbarUI
-      all={all}
-      large={large}
-      medium={medium}
-      small={small}
-      theme={theme}
-      themes={themes}
-    >
-      <LogoUI>
-        <Link href="/">contractor pro™</Link>
-      </LogoUI>
-      <NavUI>
-        <ThemeSwitch all={"margin-left: 40px;"} />
-        {links.map((item) => {
-          return (
-            <LinkUI>
-              <Link href={item.url}>{item.text}</Link>
-            </LinkUI>
-          );
-        })}
-        <Button
-          all={`background: ${themes.button}; color: #fff; margin-left: 40px`}
-        >
-          Get a Quote
-        </Button>
-      </NavUI>
-    </NavbarUI>
+    <Cont theme={theme} themes={themes}>
+      <NavbarUI
+        all={all}
+        large={large}
+        medium={medium}
+        small={small}
+        theme={theme}
+        themes={themes}
+      >
+        <LogoUI>
+          <Link href="/">contractor pro™</Link>
+        </LogoUI>
+        <NavUI>
+          <ThemeSwitch all={"margin-left: 40px;"} />
+          {links.map((item) => {
+            return (
+              <LinkUI>
+                <Link href={item.url}>{item.text}</Link>
+              </LinkUI>
+            );
+          })}
+          <Button
+            href={"/contact"}
+            all={`background: ${themes.button}; color: #fff; margin-left: 40px`}
+          >
+            Get a Quote
+          </Button>
+        </NavUI>
+      </NavbarUI>
+    </Cont>
   );
 };
+
+const Cont = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: ${(props) => themes[props.theme].primary};
+`;
 
 const NavbarUI = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  background: ${(props) => themes[props.theme].primary};
 
   ${(props) => props.all};
 

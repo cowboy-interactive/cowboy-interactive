@@ -1,15 +1,17 @@
 export const themes = {
   default: {
     primary: "#fff",
-    secondary: "#001E2F",
+    secondary: "#333",
     highlight: "#E66E00;",
     button: "linear-gradient(135deg, #E56E00 0%, #FF7A00 100%);",
+    footer: "#333"
   },
   dark: {
-    primary: "#001E2F",
+    primary: "#333",
     secondary: "#fff",
     highlight: "#E66E00;",
     button: "linear-gradient(135deg, #E56E00 0%, #FF7A00 100%);",
+    footer: "#222"
   },
   highlight: "#E66E00;",
   button: "linear-gradient(135deg, #E56E00 0%, #FF7A00 100%);",

@@ -55,15 +55,16 @@ const Card = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-
   cursor: pointer;
   flex-direction: column;
   overflow: hidden;
   transition: 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 `;
 
 const ImageCont = styled.div`
   transition: 0.2s ease;
+  display: flex;
   &:hover {
     transform: scale(110%);
   }

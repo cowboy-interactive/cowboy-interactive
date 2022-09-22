@@ -28,33 +28,23 @@ export const Testimonials = ({ all, large, medium, small }) => {
 const Cont = styled.div`
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
-  grid-gap: 100px;
+  grid-gap: 20px;
   width: 100%;
+
   @media (max-width: ${sizes.small}) {
     grid-template-columns: 2fr;
   }
-`;
-
-const Icon = styled.div`
-  min-width: 50px;
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.themes.highlight};
-  color: white;
-  border-radius: 5px;
-  margin: 0 0 20px 0;
 `;
 
 const Card = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 5px;
   flex-direction: column;
-
+  transition: 0.2s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+  padding: 40px;
   width: 100%;
 
   @media (max-width: ${sizes.small}) {
