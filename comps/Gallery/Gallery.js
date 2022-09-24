@@ -6,6 +6,7 @@ import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import Image from "next/image";
 import { useState } from "react";
+import { Img } from "../Img";
 
 export const Gallery = ({ all, large, medium, small }) => {
   const [overlay, setOverlay] = useState(false);
@@ -32,9 +33,7 @@ export const Gallery = ({ all, large, medium, small }) => {
         {links.map((item) => {
           return (
             <Card onClick={handleImageClick}>
-              <ImageCont>
-                <Image src={item.image} width={700} height={450} />
-              </ImageCont>
+              <Img src={item.image} alt={item.head} />
             </Card>
           );
         })}

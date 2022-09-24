@@ -32,7 +32,7 @@ export default function Work() {
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column;"}
       >
-                <Container
+        <Container
           all={"align-items: space-between; "}
           small={
             "margin-bottom: 60px; align-items: center; text-align: center;"

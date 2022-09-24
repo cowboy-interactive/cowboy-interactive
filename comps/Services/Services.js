@@ -5,6 +5,7 @@ import { sizes, themes } from "../../utils/variables";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import Image from "next/image";
+import { Img } from "../Img";
 
 export const Services = ({ all, large, medium, small }) => {
   return (
@@ -13,9 +14,7 @@ export const Services = ({ all, large, medium, small }) => {
         return (
           <Link href={item.url} target={item.target}>
             <Card>
-              <ImageCont>
-                <Image src={item.image} width={700} height={450} />
-              </ImageCont>
+              <Img src={item.image} alt={item.head} />
               <Column>
                 <Icon themes={themes}>{item.icon}</Icon>
                 <H3 all={"margin: 0 0 20px 0"}>{item.head}</H3>
@@ -62,8 +61,7 @@ const Card = styled.div`
   border-radius: 5px;
   overflow: hidden;
   transition: 0.2s ease;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
-
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 `;
 
 const ImageCont = styled.div`
@@ -72,7 +70,6 @@ const ImageCont = styled.div`
   align-items: flex-start;
   border-radius: 10px;
   transition: 0.2s ease;
-
 `;
 
 const Column = styled.div`
@@ -84,7 +81,6 @@ const Column = styled.div`
   top: -25px;
   z-index: 100;
   padding: 0 40px 15px 40px;
-  
 
   @media (max-width: ${sizes.small}) {
     justify-content: flex-start;

@@ -11,7 +11,7 @@ export const H3 = ({ children, all, large, medium, small }) => {
 
 const Cont = styled.h2`
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   color: ${themes.highlight};
 
   ${(props) => props.all};

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { sizes } from "../utils/variables";
 import Image from "next/image";
 
-export const Img = ({ src, all, large, medium, small }) => {
+export const Img = ({ src, all, large, medium, small, alt }) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
-      <Image src={src} width={700} height={450} />
+      <Image src={src} width={700} height={450} alt={alt} />
     </Cont>
   );
 };
