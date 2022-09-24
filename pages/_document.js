@@ -30,7 +30,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icon.png"></link>
@@ -41,7 +41,7 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
