@@ -1,3 +1,4 @@
+import { Head } from "next/document";
 import { Footer } from "../comps/Footer/Footer";
 import { Navbar } from "../comps/Navbar/Navbar";
 import "../styles/globals.css";
@@ -12,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         medium={"width: 90vw;"}
       />
       <Component {...pageProps} />
-      <Footer/>
+      <Footer />
     </AppProvider>
   );
 }

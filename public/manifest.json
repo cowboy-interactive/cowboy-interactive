@@ -1,0 +1,9 @@
+{
+  "name": "cowboy_interactive_contractor_pro",
+  "short_name": "contractor_pro",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#90cdf4",
+  "theme_color": "#90cdf4",
+  "orientation": "portrait-primary"
+}

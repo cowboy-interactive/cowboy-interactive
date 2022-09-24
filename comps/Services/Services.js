@@ -10,9 +10,9 @@ import { Img } from "../Img";
 export const Services = ({ all, large, medium, small }) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
-      {links.map((item) => {
+      {links.map((item, i) => {
         return (
-          <Link href={item.url} target={item.target}>
+          <Link href={item.url} target={item.target} key={i}>
             <Card>
               <Img src={item.image} alt={item.head} />
               <Column>

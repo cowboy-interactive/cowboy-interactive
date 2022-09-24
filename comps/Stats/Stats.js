@@ -12,9 +12,9 @@ export const Stats = ({ all, large, medium, small }) => {
   const { theme } = useTheme();
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
-      {links.map((item) => {
+      {links.map((item, i) => {
         return (
-          <Card>
+          <Card key={i}>
             <H2 all={`margin: 0 0 10px 0; color:white`}>
               {item.head}
             </H2>

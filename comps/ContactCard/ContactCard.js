@@ -21,9 +21,9 @@ export const ContactCard = ({
   const { theme } = useTheme();
   return (
     <Cont all={all} large={large} medium={medium} small={small} xsmall={xsmall}>
-      {links.map((item) => {
+      {links.map((item, i) => {
         return (
-          <a href={item.url} target={item.target}>
+          <a href={item.url} target={item.target} key={i}>
             <Card all={all} large={large} medium={medium} small={small}>
               <Icon themes={themes}>{item.icon}</Icon>
               <Column>

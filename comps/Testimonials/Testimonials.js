@@ -9,9 +9,9 @@ import Image from "next/image";
 export const Testimonials = ({ all, large, medium, small }) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
-      {links.map((item) => {
+      {links.map((item, i) => {
         return (
-          <Link href={item.url} target={item.target}>
+          <Link href={item.url} target={item.target} key={i}>
             <Card all={all} large={large} medium={medium} small={small}>
               <Column>
                 <H3 all={"margin: 0 0 20px 0; "}>{item.head}</H3>

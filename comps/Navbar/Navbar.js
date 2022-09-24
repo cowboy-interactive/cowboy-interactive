@@ -24,9 +24,9 @@ export const Navbar = ({ children, all, large, medium, small }) => {
         </LogoUI>
         <NavUI>
           <ThemeSwitch all={"margin-left: 40px;"} />
-          {links.map((item) => {
+          {links.map((item, i) => {
             return (
-              <LinkUI>
+              <LinkUI key={i}>
                 <Link href={item.url}>{item.text}</Link>
               </LinkUI>
             );

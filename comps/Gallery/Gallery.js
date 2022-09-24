@@ -30,9 +30,9 @@ export const Gallery = ({ all, large, medium, small }) => {
       </OverlayCont>
 
       <Cont all={all} large={large} medium={medium} small={small}>
-        {links.map((item) => {
+        {links.map((item, i) => {
           return (
-            <Card onClick={handleImageClick}>
+            <Card onClick={handleImageClick} key={i}>
               <Img src={item.image} alt={item.head} />
             </Card>
           );

@@ -30,9 +30,9 @@ export const Footer = ({ all, large, medium, small }) => {
           </Text>
 
           <Row>
-            {social.map((item) => {
+            {social.map((item, i) => {
               return (
-                <Icon>
+                <Icon key={i}>
                   <Link href={item.url} target={item.target}>
                     {item.icon}
                   </Link>
@@ -46,9 +46,9 @@ export const Footer = ({ all, large, medium, small }) => {
           <H3 all={"color: #fff; max-width: 500px; margin: 0 0 40px 0;"}>
             Links
           </H3>
-          {links.map((item) => {
+          {links.map((item, i) => {
             return (
-              <LinkUI>
+              <LinkUI key={i}>
                 <Link href={item.url} target={item.target}>
                   {item.head}
                 </Link>
