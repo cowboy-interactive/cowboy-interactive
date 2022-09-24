@@ -22,7 +22,7 @@ export const Gallery = ({ all, large, medium, small }) => {
     <>
       <OverlayCont overlay={overlay ? "flex" : "none"}>
         <ImageOverlay>
-          <Image src={"/contracting.jpg"} width={1092} height={702} />
+          <Image src={"/contracting-lg.jpg"} width={1092} height={702} />
         </ImageOverlay>
 
         <Overlay onClick={closeOverlay}></Overlay>
