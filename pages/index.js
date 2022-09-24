@@ -33,14 +33,10 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H1
-            all={"margin: 0 0 40px 0; maxWidth: 800px;"}
-            large={"font-size: 48px;"}
-            xsmall={"font-size: 36px;"}
-          >
-            We provide effective <br></br> contracting services
+          <H1>
+            We provide effective <br /> contracting services
           </H1>
-          <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
+          <Text all={"margin: 0 0 60px 0; max-width: 500px;"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.
@@ -68,8 +64,7 @@ export default function Home() {
           all={"width: 60vw; justify-content: space-between;"}
           medium={"width: 80vw"}
           small={"flex-direction: column; align-items: center; "}
-          xsmall={"align-items: flex-start; "}
-
+          xsmall={"align-items: flex-start;"}
         />
       </Section>
 
@@ -85,7 +80,7 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>About Us</H3>
+          <H3 all={`margin: 0 0 20px 0;`}>About Us</H3>
           <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
             A team of reliable and <br /> experienced contractors
           </H2>
@@ -165,9 +160,7 @@ export default function Home() {
       >
         <Container
           all={"align-items: center; text-align: center;"}
-          small={
-            "align-items: center; text-align: center;"
-          }
+          small={"align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
           <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Testimonials</H3>
@@ -187,14 +180,13 @@ export default function Home() {
       >
         <Container
           all={"align-items: space-between; "}
-          small={
-            "align-items: center; text-align: center;"
-          }
+          small={"align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
           <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Past Projects</H3>
-          <H2 all={"margin: 0 0 60px 0; max-width: 500px;"}>
-            Our project results speak <br /> for themselves
+          <H2 all={"margin: 0 0 60px 0; max-width: 700px;"}>
+            Our project results
+            <br /> speak for themselves
           </H2>
           <Gallery />
         </Container>

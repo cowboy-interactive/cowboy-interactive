@@ -13,7 +13,8 @@ export const Img = ({ src, all, large, medium, small }) => {
 const Cont = styled.div`
   ${(props) => props.all};
   display: flex;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+  
   @media (max-width: ${sizes.large}) {
     ${(props) => props.large};
   }

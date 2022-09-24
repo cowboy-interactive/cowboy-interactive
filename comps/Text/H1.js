@@ -10,17 +10,15 @@ export const H1 = ({ children, all, large, medium, small, xsmall }) => {
 };
 
 const Cont = styled.h1`
-  font-size: 72px;
+  font-size: 64px;
   font-weight: 700;
-
-  @media (max-width: ${sizes.medium}) {
-    font-size: 48px;
-  }
+  margin: 0 0 40px 0;
 
   ${(props) => props.all};
 
   @media (max-width: ${sizes.large}) {
     ${(props) => props.large};
+    font-size: 48px;
   }
 
   @media (max-width: ${sizes.medium}) {
@@ -32,6 +30,7 @@ const Cont = styled.h1`
   }
 
   @media (max-width: ${sizes.xsmall}) {
+    font-size: 36px;
     ${(props) => props.xsmall};
   }
 `;

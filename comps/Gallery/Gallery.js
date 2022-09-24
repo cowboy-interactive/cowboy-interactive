@@ -5,22 +5,41 @@ import { sizes, themes } from "../../utils/variables";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import Image from "next/image";
+import { useState } from "react";
 
 export const Gallery = ({ all, large, medium, small }) => {
+  const [overlay, setOverlay] = useState(false);
+
+  const handleImageClick = () => {
+    setOverlay(true);
+  };
+
+  const closeOverlay = () => {
+    setOverlay(false);
+  };
+
   return (
-    <Cont all={all} large={large} medium={medium} small={small}>
-      {links.map((item) => {
-        return (
-          <Link href={item.url} target={item.target}>
-            <Card>
+    <>
+      <OverlayCont overlay={overlay ? "flex" : "none"}>
+        <ImageOverlay>
+          <Image src={"/contracting.jpg"} width={1092} height={702} />
+        </ImageOverlay>
+
+        <Overlay onClick={closeOverlay}></Overlay>
+      </OverlayCont>
+
+      <Cont all={all} large={large} medium={medium} small={small}>
+        {links.map((item) => {
+          return (
+            <Card onClick={handleImageClick}>
               <ImageCont>
                 <Image src={item.image} width={700} height={450} />
               </ImageCont>
             </Card>
-          </Link>
-        );
-      })}
-    </Cont>
+          );
+        })}
+      </Cont>
+    </>
   );
 };
 
@@ -37,18 +56,6 @@ const Cont = styled.div`
   @media (max-width: ${sizes.xsmall}) {
     grid-template-columns: 2fr;
   }
-`;
-
-const Icon = styled.div`
-  min-width: 50px;
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.themes.highlight};
-  color: white;
-  border-radius: 5px;
-  margin: 0 0 20px 0;
 `;
 
 const Card = styled.div`
@@ -68,4 +75,33 @@ const ImageCont = styled.div`
   &:hover {
     transform: scale(110%);
   }
+`;
+
+const OverlayCont = styled.div`
+  display: ${({ overlay }) => overlay};
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Overlay = styled.div`
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 50%;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 999;
+`;
+
+const ImageOverlay = styled.div`
+  display: flex;
+  z-index: 9999;
 `;

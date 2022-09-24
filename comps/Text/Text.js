@@ -12,6 +12,7 @@ export const Text = ({ children, all, color, medium, small }) => {
 const Cont = styled.p`
   font-size: 16px;
   font-weight: 400;
+  
   color: ${(props) => props.color};
   ${(props) => props.all};
 
