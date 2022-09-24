@@ -103,16 +103,6 @@ const ColumnUI = styled.form`
   margin: 0 0 60px 0;
 `;
 
-const TextUI = styled.div`
-  width: 90%;
-  max-width: 500px;
-  margin: 0 0 40px 0;
-
-  @media (max-width: 700px) {
-    width: 100%;
-  }
-`;
-
 const FormUI = styled.form`
   width: 100%;
   display: flex;

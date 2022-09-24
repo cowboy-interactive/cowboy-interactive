@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { links } from "./data";
-import { sizes, themes } from "../../utils/variables";
+import { sizes } from "../../utils/variables";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
-import Image from "next/image";
 
 export const Testimonials = ({ all, large, medium, small }) => {
   return (

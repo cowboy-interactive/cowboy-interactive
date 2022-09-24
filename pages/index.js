@@ -1,6 +1,5 @@
 import { Button } from "../comps/Button";
 import { Container } from "../comps/Container";
-import { Navbar } from "../comps/Navbar/Navbar";
 import { Section } from "../comps/Section";
 import { H1 } from "../comps/Text/H1";
 import { Text } from "../comps/Text/Text";
@@ -14,7 +13,6 @@ import { Testimonials } from "../comps/Testimonials/Testimonials";
 import ContactForm from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
 import { Gallery } from "../comps/Gallery/Gallery";
-import { Footer } from "../comps/Footer/Footer";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -93,7 +91,7 @@ export default function Home() {
             <Button>About Our Company</Button>
           </Container>
         </Container>
-        <Img src="/home.jpg" alt="home exterior"/>
+        <Img src="/home.jpg" alt="home exterior" />
       </Section>
 
       <Section
@@ -125,7 +123,7 @@ export default function Home() {
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column-reverse;"}
       >
-        <Img src="/quality.jpg" alt="interior room"/>
+        <Img src="/quality.jpg" alt="interior room" />
         <Container
           all={"margin:0 0 0 40px;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}

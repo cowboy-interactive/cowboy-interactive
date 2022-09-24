@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import Link from "next/link";
 import { links } from "./data";
 import { sizes, themes } from "../../utils/variables";
-import { H3 } from "../Text/H3";
-import { Text } from "../Text/Text";
 import Image from "next/image";
 import { useState } from "react";
 import { Img } from "../Img";
@@ -33,7 +30,9 @@ export const Gallery = ({ all, large, medium, small }) => {
         {links.map((item, i) => {
           return (
             <Card onClick={handleImageClick} key={i}>
-              <Img src={item.image} alt={item.head} />
+              <ImageCont>
+                <Img src={item.image} alt={item.head} />
+              </ImageCont>
             </Card>
           );
         })}

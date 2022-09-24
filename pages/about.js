@@ -8,12 +8,8 @@ import { Img } from "../comps/Img";
 import { H2 } from "../comps/Text/H2";
 import { themes } from "../utils/variables";
 import { H3 } from "../comps/Text/H3";
-import { ContactCard } from "../comps/ContactCard/ContactCard";
-import { Services } from "../comps/Services/Services";
-import { Testimonials } from "../comps/Testimonials/Testimonials";
 import ContactForm from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
-import { Gallery } from "../comps/Gallery/Gallery";
 import { Stats } from "../comps/Stats/Stats";
 
 export default function About() {

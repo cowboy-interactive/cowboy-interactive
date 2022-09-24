@@ -1,4 +1,4 @@
-import { Calendar, Facebook, Instagram, Linkedin, Mail, Map, Paperclip, Phone, Tool } from "react-feather";
+import { Calendar, Facebook, Instagram, Linkedin, Mail, Map, Paperclip, Tool } from "react-feather";
 
 export const links = [
   {

@@ -1,15 +1,10 @@
 import styled from "styled-components";
-import Link from "next/link";
 import { links } from "./data";
-import { sizes, themes } from "../../utils/variables";
-import { H3 } from "../Text/H3";
+import { sizes } from "../../utils/variables";
 import { Text } from "../Text/Text";
-import Image from "next/image";
-import { useTheme } from "../../utils/provider";
 import { H2 } from "../Text/H2";
 
 export const Stats = ({ all, large, medium, small }) => {
-  const { theme } = useTheme();
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
       {links.map((item, i) => {
@@ -55,27 +50,6 @@ const Card = styled.div`
   @media (max-width: ${sizes.small}) {
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-  }
-`;
-
-const Column = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  z-index: 100;
-
-  @media (max-width: ${sizes.small}) {
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-
-  @media (max-width: ${sizes.xsmall}) {
-    justify-content: flex-start;
-    align-items: flex-start;
     width: 100%;
   }
 `;

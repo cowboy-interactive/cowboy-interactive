@@ -4,7 +4,6 @@ import { links } from "./data";
 import { sizes, themes } from "../../utils/variables";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
-import Image from "next/image";
 import { Img } from "../Img";
 
 export const Services = ({ all, large, medium, small }) => {
@@ -62,14 +61,6 @@ const Card = styled.div`
   overflow: hidden;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-`;
-
-const ImageCont = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border-radius: 10px;
-  transition: 0.2s ease;
 `;
 
 const Column = styled.div`

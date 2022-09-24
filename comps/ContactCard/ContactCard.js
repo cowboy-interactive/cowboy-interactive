@@ -1,24 +1,11 @@
 import styled from "styled-components";
-import Link from "next/link";
 import { links } from "./data";
 import { sizes, themes } from "../../utils/variables";
-import { Button } from "../Button";
-import ThemeSwitch from "../ThemeSwitch";
 import { useTheme } from "../../utils/provider";
-import { Container } from "../Container";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 
-export const ContactCard = ({
-  children,
-  all,
-  large,
-  medium,
-  small,
-  xsmall,
-  color,
-}) => {
-  const { theme } = useTheme();
+export const ContactCard = ({ all, large, medium, small, xsmall, color }) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small} xsmall={xsmall}>
       {links.map((item, i) => {
