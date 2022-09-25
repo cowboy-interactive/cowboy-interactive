@@ -91,7 +91,7 @@ export default function Home() {
             <Button>About Our Company</Button>
           </Container>
         </Container>
-        <Img src="/home.jpg" alt="home exterior" />
+        <Img src="/home.jpg" alt="home exterior"/>
       </Section>
 
       <Section
@@ -123,7 +123,7 @@ export default function Home() {
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column-reverse;"}
       >
-        <Img src="/quality.jpg" alt="interior room" />
+        <Img src="/quality.jpg" alt="interior room"/>
         <Container
           all={"margin:0 0 0 40px;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}

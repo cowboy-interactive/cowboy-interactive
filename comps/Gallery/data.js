@@ -1,52 +1,32 @@
-import { Calendar, Paperclip, Tool } from "react-feather";
-
 export const links = [
   {
     head: "Project Planning",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Calendar />,
-    target: "",
+    name: "interior-2",
     image: "/interior-2.jpg",
   },
   {
     head: "Project Managment",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Paperclip />,
-    target: "",
+    name: "interior-3",
     image: "/interior-3.jpg",
   },
   {
     head: "General Contracting",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Tool />,
-    target: "_blank",
+    name: "interior-4",
     image: "/interior-4.jpg",
   },
   {
     head: "Project Planning",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Calendar />,
-    target: "",
+    name: "interior-5",
     image: "/interior-5.jpg",
   },
   {
     head: "Project Managment",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Paperclip />,
-    target: "",
+    name: "interior",
     image: "/interior.jpg",
   },
   {
     head: "General Contracting",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Tool />,
-    target: "_blank",
+    name: "quality",
     image: "/quality.jpg",
   },
 ];
