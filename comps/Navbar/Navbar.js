@@ -43,7 +43,8 @@ export const Navbar = ({ children, all, large, medium, small }) => {
             </Button>
           </NavUI>
           <MobileUI
-            dark={themes[theme] == "dark"}
+            theme={theme}
+            themes={themes}
             onClick={() => setShowMenu(!showMenu)}
           >
             {showMenu ? <X size={24} /> : <Menu size={24} />}
@@ -51,73 +52,64 @@ export const Navbar = ({ children, all, large, medium, small }) => {
         </NavbarUI>
       </Cont>
       {showMenu ? (
-        <MobileMenuUI dark={themes[theme] == "dark"}>
+        <MobileMenuUI theme={theme} themes={themes}>
           <Link href="/#work">
-            <MobileLinkUI
-              dark={themes[theme] == "dark"}
-              onClick={() => setShowMenu(false)}
-            >
+            <MobileLinkUI theme={theme} themes={themes}>
               Home
             </MobileLinkUI>
           </Link>
           <Link href="/about">
-            <MobileLinkUI
-              dark={themes[theme] == "dark"}
-              onClick={() => setShowMenu(false)}
-            >
+            <MobileLinkUI theme={theme} themes={themes}>
               About
             </MobileLinkUI>
           </Link>
           <Link href="/services">
-            <MobileLinkUI
-              dark={themes[theme] == "dark"}
-              onClick={() => setShowMenu(false)}
-            >
+            <MobileLinkUI theme={theme} themes={themes}>
               Services
             </MobileLinkUI>
           </Link>
           <Link href="/work">
-            <MobileLinkUI
-              dark={themes[theme] == "dark"}
-              onClick={() => setShowMenu(false)}
-            >
+            <MobileLinkUI theme={theme} themes={themes}>
               Work
             </MobileLinkUI>
           </Link>
 
           <Link href="/contact">
-            <MobileLinkUI
-              dark={themes[theme] == "dark"}
-              onClick={() => setShowMenu(false)}
-            >
+            <MobileLinkUI theme={theme} themes={themes}>
               Contact
             </MobileLinkUI>
           </Link>
 
-          <MobileLinkUI
-            dark={themes[theme] == "dark"}
-            target="_blank"
-            href="https://github.com/julianmayes"
-            onClick={() => setShowMenu(false)}
-          >
-            <Instagram size={24} />
-          </MobileLinkUI>
-          <MobileLinkUI
-            dark={themes[theme] == "dark"}
-            target="_blank"
-            href="https://www.linkedin.com/in/julian-mayes-b27898134/"
-            onClick={() => setShowMenu(false)}
-          >
-            <Linkedin size={24} />
-          </MobileLinkUI>
-          <MobileLinkUI
-            dark={themes[theme] == "dark"}
-            target="_blank"
-            href="https://www.linkedin.com/in/julian-mayes-b27898134/"
-            onClick={() => setShowMenu(false)}
-          >
-            <Facebook size={24} />
-          </MobileLinkUI>
+          <Row>
+            <MobileIcon
+              theme={theme}
+              themes={themes}
+              target="_blank"
+              href="https://github.com/julianmayes"
+              onClick={() => setShowMenu(false)}
+            >
+              <Instagram size={24} />
+            </MobileIcon>
+            <MobileIcon
+              theme={theme}
+              themes={themes}
+              target="_blank"
+              href="https://www.linkedin.com/in/julian-mayes-b27898134/"
+              onClick={() => setShowMenu(false)}
+            >
+              <Linkedin size={24} />
+            </MobileIcon>
+            <MobileIcon
+              theme={theme}
+              themes={themes}
+              target="_blank"
+              href="https://www.linkedin.com/in/julian-mayes-b27898134/"
+              onClick={() => setShowMenu(false)}
+            >
+              <Facebook size={24} />
+            </MobileIcon>
+          </Row>
+          <ThemeSwitch />
         </MobileMenuUI>
       ) : (
         <></>
@@ -135,6 +127,14 @@ const Cont = styled.div`
   top: 0;
   z-index: 9999;
   background: ${(props) => themes[props.theme].primary};
+`;
+
+const Row = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 40px 0;
 `;
 
 const NavbarUI = styled.div`
@@ -184,7 +184,7 @@ const MobileUI = styled.div`
   display: none;
   cursor: pointer;
 
-  color: ${(props) => (props.dark ? "white" : "black")};
+  color: ${(props) => themes[props.theme].secondary};
   @media (max-width: ${sizes.small}) {
     display: flex;
   }
@@ -195,10 +195,10 @@ const MobileMenuUI = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 999;
   width: 100vw;
   height: 100vh;
-  background: ${(props) => (props.dark ? "black" : "white")};
+  background: ${(props) => themes[props.theme].primary};
   @media (max-width: ${sizes.small}) {
     display: flex;
     padding: 0px 5% 0 5%;
@@ -212,5 +212,12 @@ const MobileLinkUI = styled.a`
   cursor: pointer;
   margin: 0 0 40px 0;
 
-  color: ${(props) => (props.dark ? "white" : "black")};
+  color: ${(props) => themes[props.theme].secondary};
+`;
+
+const MobileIcon = styled.a`
+  cursor: pointer;
+  margin: 0 20px;
+
+  color: ${(props) => themes[props.theme].secondary};
 `;

@@ -11,10 +11,6 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Contractor Pro</title>
       </Head>
-      <Navbar
-        all={"height: 80px; width: 80vw; max-width: 1600px; "}
-        medium={"width: 90vw;"}
-      />
       <Component {...pageProps} />
       <Footer />
     </AppProvider>

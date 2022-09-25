@@ -13,12 +13,17 @@ import { Testimonials } from "../comps/Testimonials/Testimonials";
 import ContactForm from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
 import { Gallery } from "../comps/Gallery/Gallery";
+import { Navbar } from "../comps/Navbar/Navbar";
 
 export default function Home() {
   const { theme } = useTheme();
 
   return (
     <Container all={"align-items: center"}>
+      <Navbar
+        all={"height: 80px; width: 80vw; max-width: 1600px; "}
+        medium={"width: 90vw;"}
+      />
       <Section
         all={
           "margin: 130px 0 50px 0; width: 80vw; max-width: 1600px; align-items: center;"
@@ -91,7 +96,7 @@ export default function Home() {
             <Button>About Our Company</Button>
           </Container>
         </Container>
-        <Img src="/home.jpg" alt="home exterior"/>
+        <Img src="/home.jpg" alt="home exterior" />
       </Section>
 
       <Section
@@ -123,7 +128,7 @@ export default function Home() {
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column-reverse;"}
       >
-        <Img src="/quality.jpg" alt="interior room"/>
+        <Img src="/quality.jpg" alt="interior room" />
         <Container
           all={"margin:0 0 0 40px;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
