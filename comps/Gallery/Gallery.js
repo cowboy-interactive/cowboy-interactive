@@ -60,7 +60,7 @@ export const Gallery = ({ all, large, medium, small }) => {
           <NavRight background={themes[theme].button} onClick={showNextImage}>
             <ArrowRight color="white" />
           </NavRight>
-          <Image src={`/${showImage.name}-lg.jpg`} width={1092} height={702} />
+          <Image src={`/${showImage.name}-lg.jpg`} width={1092} height={702} priority={true}/>
           <CloseButton color={themes["dark"].primary} onClick={closeOverlay}>
             close
           </CloseButton>
@@ -74,7 +74,7 @@ export const Gallery = ({ all, large, medium, small }) => {
           return (
             <Card onClick={() => handleImageClick(item, i)} key={i}>
               <ImageCont>
-                <Img src={item.image} alt={item.head} />
+                <Img src={item.image} alt={item.head} priority={true}/>
               </ImageCont>
             </Card>
           );
@@ -116,6 +116,11 @@ const ImageCont = styled.div`
   &:hover {
     transform: scale(110%);
   }
+  @media (max-width: ${sizes.small}) {
+    &:hover {
+      transform: scale(100%);
+    }
+  }
 `;
 
 const OverlayCont = styled.div`
@@ -146,6 +151,7 @@ const Overlay = styled.div`
 const ImageOverlay = styled.div`
   display: flex;
   z-index: 9999;
+  background: white;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -188,7 +194,7 @@ const CloseButton = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: ${({ color }) => color};
   width: 100%;
