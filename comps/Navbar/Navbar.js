@@ -109,7 +109,6 @@ export const Navbar = ({ children, all, large, medium, small }) => {
               <Facebook size={24} />
             </MobileIcon>
           </Row>
-          <ThemeSwitch />
         </MobileMenuUI>
       ) : (
         <></>
