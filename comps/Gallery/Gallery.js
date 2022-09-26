@@ -19,7 +19,11 @@ export const Gallery = ({
   transition = { ease: "easeOut", duration: 1 },
 }) => {
   const [overlay, setOverlay] = useState(false);
-  const [showImage, setShowImage] = useState("/contracting-lg.jpg");
+  const [showImage, setShowImage] = useState({
+    head: "Project Planning",
+    name: "interior-2",
+    image: "/interior-2.jpg",
+  });
   const [index, setIndex] = useState(0);
   const { theme } = useTheme();
 
@@ -70,11 +74,7 @@ export const Gallery = ({
           <NavRight background={themes[theme].button} onClick={showNextImage}>
             <ArrowRight color="white" />
           </NavRight>
-          <Img
-            src={`/${showImage.name}-lg.jpg`}
-            width={1092}
-            height={702}
-          />
+          <Img src={`/${showImage.name}-lg.jpg`} width={1092} height={702} />
           <CloseButton color={themes["dark"].primary} onClick={closeOverlay}>
             close
           </CloseButton>
