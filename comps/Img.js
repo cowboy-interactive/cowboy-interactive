@@ -15,7 +15,8 @@ export const Img = ({
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 1 },
   width=700,
-  height=450
+  height=450,
+  priority=false
 
 }) => {
   return (
@@ -28,8 +29,9 @@ export const Img = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
+      priority={true}
     >
-      <Image src={src} width={width} height={height} alt={alt} priority={true}/>
+      <Image src={src} width={width} height={height} alt={alt} priority={priority}/>
     </Cont>
   );
 };
