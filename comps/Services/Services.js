@@ -5,14 +5,29 @@ import { sizes, themes } from "../../utils/variables";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import { Img } from "../Img";
+import { motion } from "framer-motion";
 
-export const Services = ({ all, large, medium, small }) => {
+export const Services = ({
+  all,
+  large,
+  medium,
+  small,
+  initial = { opacity: 0 },
+  whileInView = { opacity: 1 },
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 1 },
+}) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
       {links.map((item, i) => {
         return (
           <Link href={item.url} target={item.target} key={i}>
-            <Card>
+            <Card
+              initial={initial}
+              whileInView={whileInView}
+              viewport={viewport}
+              transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
+            >
               <Img src={item.image} alt={item.head} />
               <Column>
                 <Icon themes={themes}>{item.icon}</Icon>
@@ -52,7 +67,7 @@ const Icon = styled.div`
   margin: 0 0 20px 0;
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

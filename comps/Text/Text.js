@@ -1,18 +1,38 @@
 import styled from "styled-components";
 import { sizes } from "../../utils/variables";
+import { motion } from "framer-motion";
 
-export const Text = ({ children, all, color, medium, small }) => {
+export const Text = ({
+  children,
+  all,
+  color,
+  medium,
+  small,
+  initial = { opacity: 1 },
+  whileInView = { opacity: 1 },
+  viewport={ once: true },
+  transition={ ease: "easeOut", duration: 2 }
+}) => {
   return (
-    <Cont color={color} all={all} small={small} medium={medium}>
+    <Cont
+      color={color}
+      all={all}
+      small={small}
+      medium={medium}
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       {children}
     </Cont>
   );
 };
 
-const Cont = styled.p`
+const Cont = styled(motion.p)`
   font-size: 16px;
   font-weight: 400;
-  
+
   color: ${(props) => props.color};
   ${(props) => props.all};
 

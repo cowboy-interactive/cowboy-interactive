@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { sizes, themes } from "../utils/variables";
 import { useTheme } from "../utils/provider";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 export const Button = ({
   children,
@@ -13,6 +14,10 @@ export const Button = ({
   small,
   xsmall,
   href = "",
+  initial = { opacity: 1 },
+  whileInView = { opacity: 1 },
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 1 },
 }) => {
   const { theme } = useTheme();
 
@@ -35,13 +40,17 @@ export const Button = ({
       xsmall={xsmall}
       background={themes[theme].secondary}
       color={themes[theme].primary}
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
     >
       {children}
     </ButtonUI>
   );
 };
 
-const ButtonUI = styled.button`
+const ButtonUI = styled(motion.button)`
   width: 200px;
   height: 40px;
   border-radius: 50px;

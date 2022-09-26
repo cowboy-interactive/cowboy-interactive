@@ -6,8 +6,18 @@ import { themes } from "../utils/variables";
 import { ContactCard } from "./ContactCard/ContactCard";
 import { H3 } from "./Text/H3";
 import { Text } from "./Text/Text";
+import { motion } from "framer-motion";
 
-export default function ContactForm({ dark, setDark, color, contact = false }) {
+export default function ContactForm({
+  dark,
+  setDark,
+  color,
+  contact = false,
+  initial = { opacity: 0 },
+  whileInView = { opacity: 1 },
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 1 },
+}) {
   const sendEmail = (e) => {
     e.preventDefault();
     window.scrollTo(0, 0);
@@ -26,7 +36,12 @@ export default function ContactForm({ dark, setDark, color, contact = false }) {
   };
 
   return (
-    <ContainerUI>
+    <Cont
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       <ColumnUI>
         <H2 all={"margin: 0 0 20px 0;"}>Get in touch.</H2>
         <Text all={"max-width: 500px;"}>
@@ -77,11 +92,11 @@ export default function ContactForm({ dark, setDark, color, contact = false }) {
           Send
         </Button>
       </FormUI>
-    </ContainerUI>
+    </Cont>
   );
 }
 
-const ContainerUI = styled.div`
+const Cont = styled(motion.div)`
   width: 100%;
   display: flex;
   justify-content: flex-start;

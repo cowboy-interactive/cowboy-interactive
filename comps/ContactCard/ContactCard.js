@@ -4,13 +4,33 @@ import { sizes, themes } from "../../utils/variables";
 import { useTheme } from "../../utils/provider";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
+import { motion } from "framer-motion";
 
-export const ContactCard = ({ all, large, medium, small, xsmall, color }) => {
+export const ContactCard = ({
+  all,
+  large,
+  medium,
+  small,
+  xsmall,
+  color,
+  initial = { opacity: 0 },
+  whileInView = { opacity: 1 },
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 1 },
+}) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small} xsmall={xsmall}>
       {links.map((item, i) => {
         return (
-          <a href={item.url} target={item.target} key={i}>
+          <motion.a
+            href={item.url}
+            target={item.target}
+            key={i}
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
+          >
             <Card all={all} large={large} medium={medium} small={small}>
               <Icon themes={themes}>{item.icon}</Icon>
               <Column>
@@ -20,7 +40,7 @@ export const ContactCard = ({ all, large, medium, small, xsmall, color }) => {
                 </Text>
               </Column>
             </Card>
-          </a>
+          </motion.a>
         );
       })}
     </Cont>

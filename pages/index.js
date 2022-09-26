@@ -36,10 +36,13 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H1>
+          <H1 initial={{ opacity: 0 }}>
             We provide effective <br /> contracting services
           </H1>
-          <Text all={"margin: 0 0 60px 0; max-width: 500px;"}>
+          <Text
+            all={"margin: 0 0 60px 0; max-width: 500px;"}
+            initial={{ opacity: 0 }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.
@@ -51,15 +54,21 @@ export default function Home() {
             <Button
               href={"/contact"}
               all={`background: ${themes.button}; color: #fff;`}
+              initial={{ opacity: 0 }}
             >
               Get a Quote
             </Button>
-            <Button all={"margin: 0 0 0 20px;"} xsmall={"margin: 20px 0 0 0;"}>
+            <Button
+              href={"/services"}
+              all={"margin: 0 0 0 20px;"}
+              xsmall={"margin: 20px 0 0 0;"}
+              initial={{ opacity: 0 }}
+            >
               Our Services
             </Button>
           </Container>
         </Container>
-        <Img src="/interior.jpg" alt="interior room" />
+        <Img src="/interior.jpg" alt="interior room" initial={{ opacity: 0 }}/>
       </Section>
 
       <Section all={"margin: 50px 0;"}>
@@ -83,20 +92,30 @@ export default function Home() {
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0;`}>About Us</H3>
-          <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
+          <H3 all={`margin: 0 0 20px 0;`} initial={{ opacity: 0 }}>
+            About Us
+          </H3>
+          <H2
+            all={"margin: 0 0 40px 0; maxWidth: 800px;"}
+            initial={{ opacity: 0 }}
+          >
             A team of reliable and <br /> experienced contractors
           </H2>
-          <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
+          <Text
+            all={"margin: 0 0 60px 0; max-width: 530px;"}
+            initial={{ opacity: 0 }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.
           </Text>
           <Container all={"flex-direction: row"}>
-            <Button>About Our Company</Button>
+            <Button href={"/about"} initial={{ opacity: 0 }}>
+              About Our Company
+            </Button>
           </Container>
         </Container>
-        <Img src="/home.jpg" alt="home exterior" />
+        <Img src="/home.jpg" alt="home exterior" initial={{ opacity: 0 }} />
       </Section>
 
       <Section
@@ -113,11 +132,19 @@ export default function Home() {
           }
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>What We Do</H3>
-          <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
+          <H3
+            all={`margin: 0 0 20px 0; maxWidth: 800px;`}
+            initial={{ opacity: 0 }}
+          >
+            What We Do
+          </H3>
+          <H2
+            all={"margin: 0 0 40px 0; maxWidth: 800px;"}
+            initial={{ opacity: 0 }}
+          >
             Our comprehensive <br /> set of services
           </H2>
-          <Services />
+          <Services initial={{ opacity: 0 }} />
         </Container>
       </Section>
 
@@ -128,17 +155,28 @@ export default function Home() {
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw; flex-direction: column-reverse;"}
       >
-        <Img src="/quality.jpg" alt="interior room" />
+        <Img src="/quality.jpg" alt="interior room" initial={{ opacity: 0 }} />
         <Container
           all={"margin:0 0 0 40px;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Why Us</H3>
-          <H2 all={"margin: 0 0 40px 0; maxWidth: 800px;"}>
+          <H3
+            all={`margin: 0 0 20px 0; maxWidth: 800px;`}
+            initial={{ opacity: 0 }}
+          >
+            Why Us
+          </H3>
+          <H2
+            all={"margin: 0 0 40px 0; maxWidth: 800px;"}
+            initial={{ opacity: 0 }}
+          >
             An exceptional quality <br /> that cant be beaten
           </H2>
-          <Text all={"margin: 0 0 60px 0; max-width: 530px;"}>
+          <Text
+            all={"margin: 0 0 60px 0; max-width: 530px;"}
+            initial={{ opacity: 0 }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.
@@ -147,6 +185,7 @@ export default function Home() {
             <Button
               href={"/contact"}
               all={`background: ${themes.button}; color: #fff;`}
+              initial={{ opacity: 0 }}
             >
               Get a Quote
             </Button>
@@ -166,8 +205,16 @@ export default function Home() {
           small={"align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Testimonials</H3>
-          <H2 all={"margin: 0 0 60px 0; maxWidth: 800px;"}>
+          <H3
+            all={`margin: 0 0 20px 0; maxWidth: 800px;`}
+            initial={{ opacity: 0 }}
+          >
+            Testimonials
+          </H3>
+          <H2
+            all={"margin: 0 0 60px 0; maxWidth: 800px;"}
+            initial={{ opacity: 0 }}
+          >
             What our clients say <br /> about us and our work
           </H2>
           <Testimonials />
@@ -186,8 +233,8 @@ export default function Home() {
           small={"align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`}>Past Projects</H3>
-          <H2 all={"margin: 0 0 60px 0; max-width: 700px;"}>
+          <H3 all={`margin: 0 0 20px 0; maxWidth: 800px;`} initial={{ opacity: 0 }}>Past Projects</H3>
+          <H2 all={"margin: 0 0 60px 0; max-width: 700px;"} initial={{ opacity: 0 }}>
             Our project results
             <br /> speak for themselves
           </H2>

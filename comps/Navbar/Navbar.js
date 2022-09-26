@@ -14,7 +14,11 @@ export const Navbar = ({ children, all, large, medium, small }) => {
 
   return (
     <>
-      <Cont theme={theme} themes={themes}>
+      <Cont
+        theme={theme}
+        themes={themes}
+        boxShadow={showMenu ? "0" : "0px 4px 20px rgba(0, 0, 0, 0.1)"}
+      >
         <NavbarUI
           all={all}
           large={large}
@@ -26,29 +30,33 @@ export const Navbar = ({ children, all, large, medium, small }) => {
           <LogoUI>
             <Link href="/">contractor pro™</Link>
           </LogoUI>
-          <NavUI>
-            <ThemeSwitch all={"margin-left: 40px;"} />
-            {links.map((item, i) => {
-              return (
-                <LinkUI key={i}>
-                  <Link href={item.url}>{item.text}</Link>
-                </LinkUI>
-              );
-            })}
-            <Button
-              href={"/contact"}
-              all={`background: ${themes.button}; color: #fff; margin-left: 40px`}
-            >
-              Get a Quote
-            </Button>
-          </NavUI>
-          <MobileUI
+          <Row>
+            <ThemeSwitch />
+            <NavUI>
+              {links.map((item, i) => {
+                return (
+                  <LinkUI key={i}>
+                    <Link href={item.url}>{item.text}</Link>
+                  </LinkUI>
+                );
+              })}
+              <Button
+                href={"/contact"}
+                all={`background: ${themes.button}; color: #fff; margin-left: 40px`}
+                initial={"opacity: 1"}
+              >
+                Get a Quote
+              </Button>
+            </NavUI>
+            <MobileUI
             theme={theme}
             themes={themes}
             onClick={() => setShowMenu(!showMenu)}
           >
             {showMenu ? <X size={24} /> : <Menu size={24} />}
           </MobileUI>
+          </Row>
+
         </NavbarUI>
       </Cont>
       {showMenu ? (
@@ -80,7 +88,7 @@ export const Navbar = ({ children, all, large, medium, small }) => {
             </MobileLinkUI>
           </Link>
 
-          <Row>
+          <Row style={{ margin: "0 0 40px 0" }}>
             <MobileIcon
               theme={theme}
               themes={themes}
@@ -126,14 +134,13 @@ const Cont = styled.div`
   top: 0;
   z-index: 9999;
   background: ${(props) => themes[props.theme].primary};
+  box-shadow: ${({ boxShadow }) => boxShadow};
 `;
 
 const Row = styled.div`
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 40px 0;
 `;
 
 const NavbarUI = styled.div`
@@ -182,6 +189,7 @@ const LinkUI = styled.div`
 const MobileUI = styled.div`
   display: none;
   cursor: pointer;
+  margin: 0 0 0 40px;
 
   color: ${(props) => themes[props.theme].secondary};
   @media (max-width: ${sizes.small}) {

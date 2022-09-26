@@ -33,10 +33,16 @@ export default function Work() {
           }
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H1 all={"margin: 0 0 40px 0; max-width: 800px;"}>
+          <H1
+            all={"margin: 0 0 40px 0; max-width: 800px;"}
+            initial={{ opacity: 0 }}
+          >
             Our project results <br /> speak for themselves
           </H1>
-          <Text all={"margin: 0 0 60px 0; max-width: 500px;"}>
+          <Text
+            all={"margin: 0 0 60px 0; max-width: 500px;"}
+            initial={{ opacity: 0 }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
             feugiat pharetra quis imperdiet cursus tristique tincidunt non
             vitae.

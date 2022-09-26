@@ -61,6 +61,7 @@ export const Footer = ({ all, large, medium, small }) => {
           color="#fff"
           all={"flex-direction: column; align-items: flex-end;"}
           medium={"align-items: flex-start;"}
+          initial={{ opacity: 1 }}
         />
       </Content>
 

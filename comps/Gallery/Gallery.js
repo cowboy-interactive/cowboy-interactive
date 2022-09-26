@@ -6,8 +6,18 @@ import { useState } from "react";
 import { Img } from "../Img";
 import { ArrowLeft, ArrowRight } from "react-feather";
 import { useTheme } from "../../utils/provider";
+import { motion } from "framer-motion";
 
-export const Gallery = ({ all, large, medium, small }) => {
+export const Gallery = ({
+  all,
+  large,
+  medium,
+  small,
+  initial = { opacity: 0 },
+  whileInView = { opacity: 1 },
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 1 },
+}) => {
   const [overlay, setOverlay] = useState(false);
   const [showImage, setShowImage] = useState("/contracting-lg.jpg");
   const [index, setIndex] = useState(0);
@@ -60,7 +70,11 @@ export const Gallery = ({ all, large, medium, small }) => {
           <NavRight background={themes[theme].button} onClick={showNextImage}>
             <ArrowRight color="white" />
           </NavRight>
-          <Image src={`/${showImage.name}-lg.jpg`} width={1092} height={702} priority={true}/>
+          <Img
+            src={`/${showImage.name}-lg.jpg`}
+            width={1092}
+            height={702}
+          />
           <CloseButton color={themes["dark"].primary} onClick={closeOverlay}>
             close
           </CloseButton>
@@ -72,9 +86,16 @@ export const Gallery = ({ all, large, medium, small }) => {
       <Cont all={all} large={large} medium={medium} small={small}>
         {links.map((item, i) => {
           return (
-            <Card onClick={() => handleImageClick(item, i)} key={i}>
+            <Card
+              onClick={() => handleImageClick(item, i)}
+              key={i}
+              initial={initial}
+              whileInView={whileInView}
+              viewport={viewport}
+              transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
+            >
               <ImageCont>
-                <Img src={item.image} alt={item.head} priority={true}/>
+                <Img src={item.image} alt={item.head} />
               </ImageCont>
             </Card>
           );
@@ -99,7 +120,7 @@ const Cont = styled.div`
   }
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
