@@ -74,7 +74,12 @@ export const Gallery = ({
           <NavRight background={themes[theme].button} onClick={showNextImage}>
             <ArrowRight color="white" />
           </NavRight>
-          <Img src={`/${showImage.name}-lg.jpg`} width={1092} height={702} />
+          <Img
+            src={`/${showImage.name}-lg.jpg`}
+            width={1092}
+            height={702}
+            alt={showImage.head}
+          />
           <CloseButton color={themes["dark"].primary} onClick={closeOverlay}>
             close
           </CloseButton>
