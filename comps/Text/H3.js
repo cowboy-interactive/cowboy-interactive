@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { sizes, themes } from "../../utils/variables";
 import { motion } from "framer-motion";
+import { useTheme } from "../../utils/provider";
 
 export const H3 = ({
   children,
@@ -13,6 +14,7 @@ export const H3 = ({
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 1 },
 }) => {
+  const { theme } = useTheme();
   return (
     <Cont
       all={all}
@@ -23,6 +25,7 @@ export const H3 = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
+      color={themes[theme].highlight}
     >
       {children}
     </Cont>
@@ -32,7 +35,7 @@ export const H3 = ({
 const Cont = styled(motion.div)`
   font-size: 20px;
   font-weight: 700;
-  color: ${themes.highlight};
+  color: ${({color}) => color}
 
   ${(props) => props.all};
 

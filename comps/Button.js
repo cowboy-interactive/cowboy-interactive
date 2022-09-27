@@ -38,8 +38,8 @@ export const Button = ({
       medium={medium}
       small={small}
       xsmall={xsmall}
-      background={themes[theme].secondary}
-      color={themes[theme].primary}
+      background={themes[theme].primary}
+      color={themes[theme].highlight}
       initial={initial}
       whileInView={whileInView}
       viewport={viewport}
@@ -61,6 +61,7 @@ const ButtonUI = styled(motion.button)`
   cursor: pointer;
   background: ${(props) => props.background};
   color: ${(props) => props.color};
+  border: 1px solid ${(props) => props.color};
   transition: 0.2s ease;
   font-weight: 500;
   font-size 16px;
@@ -85,7 +86,7 @@ const ButtonUI = styled(motion.button)`
   }
 
   &:hover {
-    filter: brightness(120%);
+    filter: brightness(110%);
     box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
   }
 `;

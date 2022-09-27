@@ -27,8 +27,8 @@ export const Navbar = ({ children, all, large, medium, small }) => {
           theme={theme}
           themes={themes}
         >
-          <LogoUI>
-            <Link href="/">contractor pro™</Link>
+          <LogoUI theme={theme} themes={themes}>
+            <Link href="/">Cowboy Interactive</Link>
           </LogoUI>
           <Row>
             <ThemeSwitch />
@@ -42,21 +42,20 @@ export const Navbar = ({ children, all, large, medium, small }) => {
               })}
               <Button
                 href={"/contact"}
-                all={`background: ${themes.button}; color: #fff; margin-left: 40px`}
+                all={`background: ${themes.button}; color: #fff; margin-left: 40px;border: none`}
                 initial={"opacity: 1"}
               >
                 Get a Quote
               </Button>
             </NavUI>
             <MobileUI
-            theme={theme}
-            themes={themes}
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            {showMenu ? <X size={24} /> : <Menu size={24} />}
-          </MobileUI>
+              theme={theme}
+              themes={themes}
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              {showMenu ? <X size={24} /> : <Menu size={24} />}
+            </MobileUI>
           </Row>
-
         </NavbarUI>
       </Cont>
       {showMenu ? (
@@ -134,6 +133,7 @@ const Cont = styled.div`
   top: 0;
   z-index: 9999;
   background: ${(props) => themes[props.theme].primary};
+  color: ${(props) => themes[props.theme].secondary};
   box-shadow: ${({ boxShadow }) => boxShadow};
 `;
 
@@ -168,8 +168,8 @@ const NavbarUI = styled.div`
 const LogoUI = styled.div`
   display: flex;
   justify-content: flex-start;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 18px;
 `;
 
 const NavUI = styled.div`

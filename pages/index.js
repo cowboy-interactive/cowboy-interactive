@@ -7,7 +7,6 @@ import { Img } from "../comps/Img";
 import { H2 } from "../comps/Text/H2";
 import { themes } from "../utils/variables";
 import { H3 } from "../comps/Text/H3";
-import { ContactCard } from "../comps/ContactCard/ContactCard";
 import { Services } from "../comps/Services/Services";
 import { Testimonials } from "../comps/Testimonials/Testimonials";
 import ContactForm from "../comps/ContactForm";
@@ -18,12 +17,14 @@ import { Scene } from "../comps/Scene";
 import useScrollTop from "../hooks/useScrollTop";
 import useWindowSize from "../hooks/useWindowSize";
 import { useState } from "react";
+import { Checklist } from "../comps/Checklist/Checklist";
+import { Templates } from "../comps/Templates/Templates";
 
 export default function Home() {
   const { theme } = useTheme();
   const scrollTop = useScrollTop();
   const windowSize = useWindowSize();
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position] = useState({ x: 0, y: 0 });
 
   return (
     <>
@@ -39,7 +40,7 @@ export default function Home() {
         />
         <Section
           all={
-            "margin: 130px 0 50px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 180px 0 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
           small={"width: 90vw; flex-direction: column;"}
@@ -52,15 +53,14 @@ export default function Home() {
             xsmall={"align-items: flex-start; text-align: left;"}
           >
             <H1 initial={{ opacity: 0 }}>
-              We provide effective <br /> contracting services
+              Web Design and Development <br /> for your small business.
             </H1>
             <Text
               all={"margin: 0 0 60px 0; max-width: 500px;"}
               initial={{ opacity: 0 }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-              feugiat pharetra quis imperdiet cursus tristique tincidunt non
-              vitae.
+              We build, host and manage fully customized websites starting at
+              $250 CAD/mo.
             </Text>
             <Container
               all={"flex-direction: row"}
@@ -68,7 +68,7 @@ export default function Home() {
             >
               <Button
                 href={"/contact"}
-                all={`background: ${themes.button}; color: #fff;`}
+                all={`background: ${themes.button}; color: #fff; border: none`}
                 initial={{ opacity: 0 }}
               >
                 Get a Quote
@@ -85,64 +85,15 @@ export default function Home() {
           </Container>
         </Section>
 
-        <Section all={"margin: 50px 0;"}>
-          <ContactCard
-            all={"width: 60vw; justify-content: space-between;"}
-            medium={"width: 80vw"}
-            small={"flex-direction: column; align-items: center; "}
-            xsmall={"align-items: flex-start;"}
-          />
-        </Section>
-
         <Section
           all={
-            "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 100px 0; width: 80vw; max-width: 1600px; justify-content: center; "
           }
           medium={"width: 90vw; align-items: center;"}
           small={"width: 90vw; flex-direction: column;"}
         >
           <Container
-            all={"margin:0 40px 0 0;"}
-            small={
-              "margin:0 0 60px 0; align-items: center; text-align: center;"
-            }
-            xsmall={"align-items: flex-start; text-align: left;"}
-          >
-            <H3 all={`margin: 0 0 20px 0;`} initial={{ opacity: 0 }}>
-              About Us
-            </H3>
-            <H2
-              all={"margin: 0 0 40px 0; maxWidth: 800px;"}
-              initial={{ opacity: 0 }}
-            >
-              A team of reliable and <br /> experienced contractors
-            </H2>
-            <Text
-              all={"margin: 0 0 60px 0; max-width: 530px;"}
-              initial={{ opacity: 0 }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-              feugiat pharetra quis imperdiet cursus tristique tincidunt non
-              vitae.
-            </Text>
-            <Container all={"flex-direction: row"}>
-              <Button href={"/about"} initial={{ opacity: 0 }}>
-                About Our Company
-              </Button>
-            </Container>
-          </Container>
-          <Img src="/home.jpg" alt="home exterior" initial={{ opacity: 0 }} />
-        </Section>
-
-        <Section
-          all={
-            "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
-          }
-          medium={"width: 90vw; align-items: center;"}
-          small={"width: 90vw; flex-direction: column;"}
-        >
-          <Container
-            all={"align-items: center; text-align: center;"}
+            all={"align-items: center; text-align: center; "}
             small={
               "margin-bottom: 60px; align-items: center; text-align: center;"
             }
@@ -155,69 +106,71 @@ export default function Home() {
               What We Do
             </H3>
             <H2
-              all={"margin: 0 0 40px 0; maxWidth: 800px;"}
+              all={"margin: 0 0 40px 0; max-width: 700px;"}
               initial={{ opacity: 0 }}
             >
-              Our comprehensive <br /> set of services
+              We take care of all your website needs, so you can focus on your
+              business.
             </H2>
+            <Text
+              all={"margin: 0 0 60px 0; max-width: 530px;"}
+              initial={{ opacity: 0 }}
+            >
+              We design and develop custom websites for small businesses
+              anywhere in Canada. Our code is hand written to ensure the best
+              performance possible, bringing more customers to your site and
+              more revenue to your business.
+            </Text>
             <Services initial={{ opacity: 0 }} />
           </Container>
         </Section>
 
         <Section
           all={
-            "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
-          small={"width: 90vw; flex-direction: column-reverse;"}
+          small={"width: 90vw; flex-direction: column;"}
         >
-          <Img
-            src="/quality.jpg"
-            alt="interior room"
-            initial={{ opacity: 0 }}
-          />
           <Container
-            all={"margin:0 0 0 40px;"}
+            all={"margin:0 40px 0 0; width: 50%;"}
             small={
-              "margin:0 0 60px 0; align-items: center; text-align: center;"
+              "margin:0 0 60px 0; align-items: center; text-align: center; width: 100%;"
             }
             xsmall={"align-items: flex-start; text-align: left;"}
           >
-            <H3
-              all={`margin: 0 0 20px 0; maxWidth: 800px;`}
-              initial={{ opacity: 0 }}
-            >
-              Why Us
-            </H3>
-            <H2
-              all={"margin: 0 0 40px 0; maxWidth: 800px;"}
-              initial={{ opacity: 0 }}
-            >
-              An exceptional quality <br /> that cant be beaten
+            <H2 all={"margin: 0 0 40px 0;"} initial={{ opacity: 0 }}>
+              No sign up costs.
+              <br />
+              No Minimum Contract. <br />
+              Just $250 CAD a month.
             </H2>
-            <Text
-              all={"margin: 0 0 60px 0; max-width: 530px;"}
+            <Text all={"margin: 0 0 60px 0;"} initial={{ opacity: 0 }}>
+              $0 down for a standard 5 page small business website. We have additional plans if you need more. Cancel anytime
+              with no fees or hassle.
+            </Text>
+
+            <Checklist
+              all={
+                "margin: 0 0 60px 0; flex-direction: column; align-items: flex-start;"
+              }
+              medium={"align-items: flex-start;"}
+              initial={{ opacity: 0 }}
+            />
+            <Button
+              href={"/contact"}
+              all={`background: ${themes.button}; color: #fff; border: none;`}
               initial={{ opacity: 0 }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-              feugiat pharetra quis imperdiet cursus tristique tincidunt non
-              vitae.
-            </Text>
-            <Container all={"flex-direction: row"}>
-              <Button
-                href={"/contact"}
-                all={`background: ${themes.button}; color: #fff;`}
-                initial={{ opacity: 0 }}
-              >
-                Get a Quote
-              </Button>
-            </Container>
+              Get a Quote
+            </Button>
           </Container>
+          <Img src="/town.svg" alt="interior room" initial={{ opacity: 0 }} />
         </Section>
 
         <Section
           all={
-            "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
           small={"width: 90vw; flex-direction: column;"}
@@ -231,13 +184,13 @@ export default function Home() {
               all={`margin: 0 0 20px 0; maxWidth: 800px;`}
               initial={{ opacity: 0 }}
             >
-              Testimonials
+              Our Plans
             </H3>
             <H2
               all={"margin: 0 0 60px 0; maxWidth: 800px;"}
               initial={{ opacity: 0 }}
             >
-              What our clients say <br /> about us and our work
+              Choose a plan that <br /> fits your busniess needs
             </H2>
             <Testimonials />
           </Container>
@@ -245,7 +198,7 @@ export default function Home() {
 
         <Section
           all={
-            "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
           small={"width: 90vw; flex-direction: column;"}
@@ -259,22 +212,21 @@ export default function Home() {
               all={`margin: 0 0 20px 0; maxWidth: 800px;`}
               initial={{ opacity: 0 }}
             >
-              Past Projects
+              Project Templates
             </H3>
             <H2
               all={"margin: 0 0 60px 0; max-width: 700px;"}
               initial={{ opacity: 0 }}
             >
-              Our project results
-              <br /> speak for themselves
+              Choose a starting point <br /> for your custom website.
             </H2>
-            <Gallery />
+            <Templates />
           </Container>
         </Section>
 
         <Section
           all={
-            "margin: 80px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
           small={"width: 90vw; flex-direction: column;"}

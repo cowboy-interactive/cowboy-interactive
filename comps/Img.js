@@ -39,7 +39,6 @@ export const Img = ({
 const Cont = styled(motion.div)`
   ${(props) => props.all};
   display: flex;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 
   @media (max-width: ${sizes.large}) {
     ${(props) => props.large};

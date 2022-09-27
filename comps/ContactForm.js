@@ -86,7 +86,7 @@ export default function ContactForm({
         />
 
         <Button
-          all={`background: ${themes.button}; color: #fff;`}
+          all={`background: ${themes.button}; color: #fff; border: none;`}
           type="submit"
         >
           Send
@@ -102,7 +102,7 @@ const Cont = styled(motion.div)`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   @media (max-width: 1300px) {
     flex-direction: column;
