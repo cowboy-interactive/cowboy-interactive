@@ -19,6 +19,7 @@ import useWindowSize from "../hooks/useWindowSize";
 import { useState } from "react";
 import { Checklist } from "../comps/Checklist/Checklist";
 import { Templates } from "../comps/Templates/Templates";
+import { Plans } from "../comps/Plans/Plans";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -180,19 +181,21 @@ export default function Home() {
             small={"align-items: center; text-align: center;"}
             xsmall={"align-items: flex-start; text-align: left;"}
           >
-            <H3
-              all={`margin: 0 0 20px 0; maxWidth: 800px;`}
-              initial={{ opacity: 0 }}
-            >
-              Our Plans
-            </H3>
+
             <H2
               all={"margin: 0 0 60px 0; maxWidth: 800px;"}
               initial={{ opacity: 0 }}
             >
               Choose a plan that <br /> fits your busniess needs
             </H2>
-            <Testimonials />
+            <Plans />
+            <Button
+                href={"/contact"}
+                all={`background: ${themes.button}; color: #fff; border: none`}
+                initial={{ opacity: 0 }}
+              >
+                Get a Quote
+              </Button>
           </Container>
         </Section>
 

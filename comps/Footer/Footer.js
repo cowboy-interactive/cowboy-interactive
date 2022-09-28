@@ -21,7 +21,7 @@ export const Footer = ({ all, large, medium, small }) => {
       <Content>
         <Column>
           <LogoUI>
-            <Link href="/">contractor pro™</Link>
+            <Link href="/">Cowboy Interactive ™ </Link>
           </LogoUI>
           <Text all={"color: #fff; max-width: 500px; margin: 0 0 60px 0"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
@@ -71,10 +71,6 @@ export const Footer = ({ all, large, medium, small }) => {
           medium={"margin: 20px 0;"}
         >
           © 2022 Cowboy Interactive. All rights reserved.
-        </Text>
-        <Text all={"color: #fff; max-width: 500px; margin: 0px;"}>
-          Website developed and maintained by{" "}
-          <Link href="https://cowboyinteractive.com">Cowboy Interactive</Link>
         </Text>
       </Bottom>
     </Cont>
@@ -165,7 +161,7 @@ const LinkUI = styled.div`
 const LogoUI = styled.div`
   display: flex;
   justify-content: flex-start;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 24px;
   color: #fff;
   margin: 0 0 40px 0;

@@ -65,21 +65,21 @@ export const Navbar = ({ children, all, large, medium, small }) => {
               Home
             </MobileLinkUI>
           </Link>
-          <Link href="/about">
+{/*           <Link href="/about">
             <MobileLinkUI theme={theme} themes={themes}>
               About
             </MobileLinkUI>
-          </Link>
+          </Link> */}
           <Link href="/services">
             <MobileLinkUI theme={theme} themes={themes}>
               Services
             </MobileLinkUI>
           </Link>
-          <Link href="/work">
+{/*           <Link href="/work">
             <MobileLinkUI theme={theme} themes={themes}>
               Work
             </MobileLinkUI>
-          </Link>
+          </Link> */}
 
           <Link href="/contact">
             <MobileLinkUI theme={theme} themes={themes}>
