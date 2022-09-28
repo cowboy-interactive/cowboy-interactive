@@ -37,7 +37,8 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#fff" />
           <meta
             name="description"
-            content="A template site for contractors"
+            content="Cowboy Interactive · Web Design and Development for your small business. We build, host and manage fully customized websites starting at
+            $250 CAD/mo. · Helping you navigate the wild wild west."
           ></meta>
         </Head>
         <body>

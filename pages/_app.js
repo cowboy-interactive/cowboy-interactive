@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppProvider>
       <Head>
-        <title>Contractor Pro</title>
+        <title>Cowboy Interactive</title>
       </Head>
       <Component {...pageProps} />
       <Footer />
