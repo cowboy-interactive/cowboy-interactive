@@ -4,7 +4,7 @@ import { Section } from "../comps/Section";
 import { Services } from "../comps/Services/Services";
 import { H1 } from "../comps/Text/H1";
 import { Text } from "../comps/Text/Text";
-import ContactForm from "../comps/ContactForm";
+import { ContactForm } from "../comps/ContactForm";
 import { themes } from "../utils/variables";
 import { useTheme } from "../utils/provider";
 

@@ -16,7 +16,6 @@ export const ContactCard = ({
   initial = { opacity: 0 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
-  transition = { ease: "easeOut", duration: 1 },
 }) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small} xsmall={xsmall}>
@@ -34,8 +33,13 @@ export const ContactCard = ({
             <Card all={all} large={large} medium={medium} small={small}>
               <Icon themes={themes}>{item.icon}</Icon>
               <Column>
-                <H3 all={"margin: 0 0 5px 0;"}>{item.head}</H3>
-                <Text color={color} all={"width: 170px;"}>
+                <Head
+                  color={themes["dark"].highlight}
+                  all={"margin: 0 0 5px 0;"}
+                >
+                  {item.head}
+                </Head>
+                <Text color={color}>
                   {item.text}
                 </Text>
               </Column>
@@ -50,6 +54,7 @@ export const ContactCard = ({
 const Cont = styled.div`
   display: flex;
   grid-gap: 40px;
+
 
   ${(props) => props.all};
 
@@ -100,4 +105,10 @@ const Column = styled.div`
   align-items: flex-start;
   flex-direction: column;
   margin-left: 20px;
+`;
+
+const Head = styled.div`
+  font-size: 20px;
+  font-weight: 700;
+  color: ${({ color }) => color} ${({ all }) => all};
 `;

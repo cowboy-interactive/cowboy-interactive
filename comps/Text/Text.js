@@ -8,6 +8,7 @@ export const Text = ({
   color,
   medium,
   small,
+  xsmall,
   initial = { opacity: 1 },
   whileInView = { opacity: 1 },
   viewport={ once: true },
@@ -18,6 +19,7 @@ export const Text = ({
       color={color}
       all={all}
       small={small}
+      xsmall={xsmall}
       medium={medium}
       initial={initial}
       whileInView={whileInView}
@@ -42,5 +44,9 @@ const Cont = styled(motion.p)`
 
   @media (max-width: ${sizes.small}) {
     ${(props) => props.small};
+  }
+
+  @media (max-width: ${sizes.xsmall}) {
+    ${(props) => props.xsmall};
   }
 `;

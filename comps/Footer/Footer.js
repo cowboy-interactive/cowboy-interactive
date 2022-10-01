@@ -24,11 +24,8 @@ export const Footer = ({ all, large, medium, small }) => {
             <Link href="/">Cowboy Interactive ™ </Link>
           </LogoUI>
           <Text all={"color: #fff; max-width: 500px; margin: 0 0 60px 0"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-            feugiat pharetra quis imperdiet cursus tristique tincidunt non
-            vitae.
+            Helping you navigate the wild wild west.
           </Text>
-
           <Row>
             {social.map((item, i) => {
               return (
@@ -112,7 +109,7 @@ const Row = styled.div`
 const Bottom = styled.div`
   margin: 60px 0 0 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: space-between;
   width: 80%;
   position: relative;

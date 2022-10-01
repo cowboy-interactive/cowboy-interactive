@@ -68,7 +68,7 @@ export const Plans = ({
                       <Text all="margin: 0 0 0 10px;">/mo</Text>
                     )}
                   </Price>
-                  <Text all={"margin: 0 0 60px 0; max-width: 500px;"}>
+                  <Text all={"margin: 0 0 60px 0; width: 100%;"} xsmall={"width: 90%;"}>
                     {item.text}
                   </Text>
 
@@ -118,14 +118,21 @@ const Cont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: ${sizes.xsmall}) {
+    text-align: left;
+  }
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr 2fr;
   grid-gap: 20px;
   width: 100%;
   margin: 0 0 40px 0;
+
 
   @media (max-width: ${sizes.small}) {
     grid-template-columns: 2fr;
@@ -141,17 +148,18 @@ const Card = styled.div`
   flex-direction: column;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  padding: 60px 0px;
   width: 100%;
   background: ${({ background }) => background};
   color: ${({ color }) => color};
   border: 2px solid ${({ border }) => border};
-  min-height: 300px;
+
 
   @media (max-width: ${sizes.small}) {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 0px;
   }
 `;
 
@@ -162,18 +170,18 @@ const Column = styled.div`
   flex-direction: column;
   position: relative;
   z-index: 100;
-  width: 70%;
 
   @media (max-width: ${sizes.small}) {
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+
   }
 
   @media (max-width: ${sizes.xsmall}) {
     justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
+    align-items:flex-start;
+    text-align: left;
+    width: 80%;
   }
 `;
 
@@ -197,11 +205,12 @@ const Price = styled.div`
 const List = styled.div`
   font-weight: 00;
   font-size: 36px;
-  width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   display: flex;
+  width: 100%;
+
 `;
 
 const Icon = styled.div`

@@ -25,15 +25,7 @@ export const Scene = ({ scrollTop, position, windowSize }) => {
         <PerspectiveCamera
           fov={75}
           makeDefault
-          rotation={
-            /*             windowSize.width > 500
-              ? [
-                  0.1 + -position.y / windowSize.height / 5,
-                  0.25 + -position.x / windowSize.width / 2.5,
-                  0,
-                ]
-              :  */ [0, 0, 0]
-          }
+          rotation={[0, 0, 0]}
           position={windowSize.width > 500 ? [0, 0, 0] : [0, 0, 10]}
         />
         <ambientLight />

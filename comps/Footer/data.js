@@ -9,30 +9,7 @@ export const links = [
     target: "",
     image: "/interior-2.jpg",
   },
-  {
-    head: "About Us",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Paperclip />,
-    target: "",
-    image: "/interior-3.jpg",
-  },
-  {
-    head: "Services",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Tool />,
-    target: "_blank",
-    image: "/interior-4.jpg",
-  },
-  {
-    head: "Our Work",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Calendar />,
-    target: "",
-    image: "/interior-5.jpg",
-  },
+
   {
     head: "Contact Us",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
@@ -46,27 +23,23 @@ export const links = [
 export const social = [
   {
     head: "Home",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
+    url: "https://www.instagram.com/cowboyinteractive/",
     icon: <Instagram />,
-    target: "",
-    image: "/interior-2.jpg",
+    target: "_blank",
   },
   {
     head: "About Us",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
+    url: "https://www.facebook.com/profile.php?id=100086089315730",
     icon: <Facebook />,
-    target: "",
-    image: "/interior-3.jpg",
+    target: "_blank",
   },
-  {
+/*   {
     head: "Services",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
     url: "/",
     icon: <Linkedin />,
     target: "_blank",
     image: "/interior-4.jpg",
-  },
+  }, */
 
 ];

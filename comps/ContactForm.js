@@ -8,7 +8,7 @@ import { H3 } from "./Text/H3";
 import { Text } from "./Text/Text";
 import { motion } from "framer-motion";
 
-export default function ContactForm({
+export const ContactForm = ({
   dark,
   setDark,
   color,
@@ -17,7 +17,7 @@ export default function ContactForm({
   whileInView = { opacity: 1 },
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 1 },
-}) {
+}) => {
   const sendEmail = (e) => {
     e.preventDefault();
     window.scrollTo(0, 0);
@@ -94,7 +94,7 @@ export default function ContactForm({
       </FormUI>
     </Cont>
   );
-}
+};
 
 const Cont = styled(motion.div)`
   width: 100%;

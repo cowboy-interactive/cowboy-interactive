@@ -8,18 +8,16 @@ import { H2 } from "../comps/Text/H2";
 import { themes } from "../utils/variables";
 import { H3 } from "../comps/Text/H3";
 import { Services } from "../comps/Services/Services";
-import { Testimonials } from "../comps/Testimonials/Testimonials";
-import ContactForm from "../comps/ContactForm";
-import { useTheme } from "../utils/provider";
-import { Gallery } from "../comps/Gallery/Gallery";
+import { ContactForm } from "../comps/ContactForm";
+import { Checklist } from "../comps/Checklist/Checklist";
+import { Templates } from "../comps/Templates/Templates";
+import { Plans } from "../comps/Plans/Plans";
 import { Navbar } from "../comps/Navbar/Navbar";
 import { Scene } from "../comps/Scene";
 import useScrollTop from "../hooks/useScrollTop";
 import useWindowSize from "../hooks/useWindowSize";
+import { useTheme } from "../utils/provider";
 import { useState } from "react";
-import { Checklist } from "../comps/Checklist/Checklist";
-import { Templates } from "../comps/Templates/Templates";
-import { Plans } from "../comps/Plans/Plans";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -60,8 +58,9 @@ export default function Home() {
               all={"margin: 0 0 60px 0; max-width: 500px;"}
               initial={{ opacity: 0 }}
             >
-              We build, host and manage fully customized websites starting at
-              $250 CAD/mo.
+              We build, host and manage fully customized websites
+              <br />
+              starting at $250 CAD/mo.
             </Text>
             <Container
               all={"flex-direction: row"}
@@ -73,14 +72,6 @@ export default function Home() {
                 initial={{ opacity: 0 }}
               >
                 Get a Quote
-              </Button>
-              <Button
-                href={"/services"}
-                all={"margin: 0 0 0 20px;"}
-                xsmall={"margin: 20px 0 0 0;"}
-                initial={{ opacity: 0 }}
-              >
-                Our Services
               </Button>
             </Container>
           </Container>
@@ -100,12 +91,6 @@ export default function Home() {
             }
             xsmall={"align-items: flex-start; text-align: left;"}
           >
-            <H3
-              all={`margin: 0 0 20px 0; maxWidth: 800px;`}
-              initial={{ opacity: 0 }}
-            >
-              What We Do
-            </H3>
             <H2
               all={"margin: 0 0 40px 0; max-width: 700px;"}
               initial={{ opacity: 0 }}
@@ -114,12 +99,12 @@ export default function Home() {
               business.
             </H2>
             <Text
-              all={"margin: 0 0 60px 0; max-width: 530px;"}
+              all={"margin: 0 0 60px 0; max-width: 500px;"}
               initial={{ opacity: 0 }}
             >
               We design and develop custom websites for small businesses
-              anywhere in Canada. Our code is hand written to ensure the best
-              performance possible, bringing more customers to your site and
+              anywhere in Canada. Our code is hand-written to ensure the best
+              performance possible, bringing more customers to your website and
               more revenue to your business.
             </Text>
             <Services initial={{ opacity: 0 }} />
@@ -143,12 +128,12 @@ export default function Home() {
             <H2 all={"margin: 0 0 40px 0;"} initial={{ opacity: 0 }}>
               No sign up costs.
               <br />
-              No Minimum Contract. <br />
               Just $250 CAD a month.
             </H2>
-            <Text all={"margin: 0 0 60px 0;"} initial={{ opacity: 0 }}>
-              $0 down for a standard 5 page small business website. We have additional plans if you need more. Cancel anytime
-              with no fees or hassle.
+            <Text all={"margin: 0 0 60px 0; max-width: 500px;"} initial={{ opacity: 0 }}>
+              $0 down for a standard 5 page small business website. We have
+              additional plans if you need more. Cancel anytime with no fees or
+              hassle.
             </Text>
 
             <Checklist
@@ -171,32 +156,33 @@ export default function Home() {
 
         <Section
           all={
-            "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
+            "margin: 100px 0; width: 60vw; align-items: center; flex-direction: column;"
           }
           medium={"width: 90vw; align-items: center;"}
-          small={"width: 90vw; flex-direction: column;"}
+          small={"width: 60vw; flex-direction: column;"}
+          xsmall={"width: 90vw; align-items: flex-start;"}
         >
           <Container
             all={"align-items: center; text-align: center;"}
             small={"align-items: center; text-align: center;"}
             xsmall={"align-items: flex-start; text-align: left;"}
           >
-
             <H2
-              all={"margin: 0 0 60px 0; maxWidth: 800px;"}
+              all={"margin: 0 0 60px 0; max-width: 500px;"}
               initial={{ opacity: 0 }}
             >
-              Choose a plan that <br /> fits your busniess needs
+              Choose a plan that fits your busniess needs
             </H2>
-            <Plans />
-            <Button
-                href={"/contact"}
-                all={`background: ${themes.button}; color: #fff; border: none`}
-                initial={{ opacity: 0 }}
-              >
-                Get a Quote
-              </Button>
+
           </Container>
+          <Plans />
+            <Button
+              href={"/contact"}
+              all={`background: ${themes.button}; color: #fff; border: none`}
+              initial={{ opacity: 0 }}
+            >
+              Get a Quote
+            </Button>
         </Section>
 
         <Section
@@ -218,10 +204,10 @@ export default function Home() {
               Project Templates
             </H3>
             <H2
-              all={"margin: 0 0 60px 0; max-width: 700px;"}
+              all={"margin: 0 0 60px 0; max-width: 500px;"}
               initial={{ opacity: 0 }}
             >
-              Choose a starting point <br /> for your custom website.
+              Choose a starting point for your custom website.
             </H2>
             <Templates />
           </Container>

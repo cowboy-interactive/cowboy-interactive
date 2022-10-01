@@ -2,7 +2,7 @@ import { Container } from "../comps/Container";
 import { Navbar } from "../comps/Navbar/Navbar";
 import { Section } from "../comps/Section";
 import { themes } from "../utils/variables";
-import ContactForm from "../comps/ContactForm";
+import { ContactForm } from "../comps/ContactForm";
 import { useTheme } from "../utils/provider";
 
 export default function Contact() {

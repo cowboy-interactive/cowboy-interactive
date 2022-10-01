@@ -61,18 +61,6 @@ const Cont = styled.div`
   }
 `;
 
-const Icon = styled.div`
-  min-width: 50px;
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.themes.highlight};
-  color: white;
-  border-radius: 5px;
-  margin: 0 0 20px 0;
-`;
-
 const Card = styled(motion.a)`
   display: flex;
   justify-content: flex-start;

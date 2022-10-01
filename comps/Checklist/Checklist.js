@@ -37,7 +37,7 @@ export const Checklist = ({
             <Icon color={themes[theme].highlight}>{item.icon}</Icon>
             <Column>
               <H3 all={"margin: 0 0 5px 0;"}>{item.head}</H3>
-              <Text color={color}>{item.text}</Text>
+              <Text all={"max-width: 400px;"} color={color}>{item.text}</Text>
             </Column>
           </Card>
         );
@@ -50,6 +50,7 @@ const Cont = styled.div`
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 2fr 2fr;
+  width: 100%;
 
   ${(props) => props.all};
 
@@ -85,6 +86,7 @@ const Card = styled(motion.div)`
 
   @media (max-width: ${sizes.small}) {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   @media (max-width: ${sizes.xsmall}) {
@@ -101,6 +103,7 @@ const Column = styled.div`
 
   @media (max-width: ${sizes.small}) {
     margin: 10px 0 0 0;
+    text-align: left;
   }
   @media (max-width: ${sizes.xsmall}) {
     margin: 0 0 0 20px;

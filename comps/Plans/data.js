@@ -11,37 +11,42 @@ import {
 } from "react-feather";
 
 export const links = [
-  {
+  /*   {
     head: "Standard + Content",
-    price: "$500 CAD",
+    price: "$1250 CAD",
     text: "Regularly posting content can grow your audience and organic reach. We got you covered.",
     style: "outline",
     url: "/",
     icon: <Calendar />,
     list: [
       {
-        head: "1000 Word Blog Post",
+        head: "Google Ad Campaign",
         icon: <Monitor />,
       },
       {
-        head: "3 Social Media Posts",
+        head: "Social Media Marketing",
         icon: <PenTool />,
       },
       {
-        head: "SEO Analytics",
+        head: "Search Engine Optimization",
         icon: <Activity />,
       },
       {
-        head: "7 Day Support",
+        head: "Brand Strategy",
         icon: <Calendar />,
       },
     ],
     image: "/planning.jpg",
-  },
+  }, */
   {
     head: "Standard",
     price: "$250 CAD",
-    text: "Our standard 5 page website. Let us take care of your website, while you focus on the rest.",
+    text: (
+      <span>
+        Our standard 5 page website. <br /> Let us take care of your website,
+        <br />while you focus on the rest."
+      </span>
+    ),
     style: "fill",
     url: "/",
     icon: <Paperclip />,
@@ -68,7 +73,13 @@ export const links = [
   {
     head: "Custom",
     price: "Inquire",
-    text: "Need a custom plan that fits your needs? Contact us to see what else we can do for your website.",
+    text: (
+      <span>
+        Need a custom plan that fits <br />
+        your needs? Contact us to see what <br />
+        we can do for your website.
+      </span>
+    ),
     style: "standard",
     url: "/",
     icon: <Tool />,

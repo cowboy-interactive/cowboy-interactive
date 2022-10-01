@@ -14,7 +14,7 @@ export const H3 = ({
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 1 },
 }) => {
-  const { theme } = useTheme();
+  const { theme, } = useTheme();
   return (
     <Cont
       all={all}

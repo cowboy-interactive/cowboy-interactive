@@ -1,18 +1,6 @@
 export const links = [
   {
     text: "Home",
-    url: "/"
+    url: "/",
   },
-/*   {
-    text: "About",
-    url: "/about"
-  }, */
-  {
-    text: "Services",
-    url: "/services"
-  },
-/*   {
-    text: "Work",
-    url: "/work"
-  }, */
 ];

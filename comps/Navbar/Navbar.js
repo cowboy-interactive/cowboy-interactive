@@ -8,7 +8,7 @@ import { useTheme } from "../../utils/provider";
 import { useState } from "react";
 import { Facebook, Instagram, Linkedin, Menu, X } from "react-feather";
 
-export const Navbar = ({ children, all, large, medium, small }) => {
+export const Navbar = ({ all, large, medium, small }) => {
   const { theme } = useTheme();
   const [showMenu, setShowMenu] = useState(false);
 
@@ -45,7 +45,7 @@ export const Navbar = ({ children, all, large, medium, small }) => {
                 all={`background: ${themes.button}; color: #fff; margin-left: 40px;border: none`}
                 initial={"opacity: 1"}
               >
-                Get a Quote
+                Contact Us
               </Button>
             </NavUI>
             <MobileUI
@@ -65,29 +65,13 @@ export const Navbar = ({ children, all, large, medium, small }) => {
               Home
             </MobileLinkUI>
           </Link>
-{/*           <Link href="/about">
-            <MobileLinkUI theme={theme} themes={themes}>
-              About
-            </MobileLinkUI>
-          </Link> */}
-          <Link href="/services">
-            <MobileLinkUI theme={theme} themes={themes}>
-              Services
-            </MobileLinkUI>
-          </Link>
-{/*           <Link href="/work">
-            <MobileLinkUI theme={theme} themes={themes}>
-              Work
-            </MobileLinkUI>
-          </Link> */}
-
           <Link href="/contact">
             <MobileLinkUI theme={theme} themes={themes}>
-              Contact
+              Contact Us
             </MobileLinkUI>
           </Link>
 
-          <Row style={{ margin: "0 0 40px 0" }}>
+          <Row all={"margin: 20px 0 0 0"}>
             <MobileIcon
               theme={theme}
               themes={themes}
@@ -137,12 +121,6 @@ const Cont = styled.div`
   box-shadow: ${({ boxShadow }) => boxShadow};
 `;
 
-const Row = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const NavbarUI = styled.div`
   width: 100%;
   display: flex;
@@ -150,19 +128,31 @@ const NavbarUI = styled.div`
   align-items: center;
   zindex: 9999;
 
-  ${(props) => props.all};
+  ${({ all }) => all};
 
   @media (max-width: ${sizes.large}) {
-    ${(props) => props.large};
+    ${({ large }) => large};
   }
 
   @media (max-width: ${sizes.medium}) {
-    ${(props) => props.medium};
+    ${({ medium }) => medium};
   }
 
   @media (max-width: ${sizes.small}) {
-    ${(props) => props.small};
+    ${({ small }) => small};
   }
+
+  @media (max-width: ${sizes.xsmall}) {
+    ${({ xsmall }) => xsmall};
+  }
+`;
+
+const Row = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ${({ all }) => all};
 `;
 
 const LogoUI = styled.div`
