@@ -29,7 +29,7 @@ export const Img = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
-      priority={true}
+      priority={"true"}
     >
       <Image src={src} width={width} height={height} alt={alt} priority={priority}/>
     </Cont>
