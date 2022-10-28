@@ -44,7 +44,7 @@ export const links = [
     text: (
       <span>
         Our standard 5 page website. <br /> Let us take care of your website,
-        <br />while you focus on the rest."
+        <br />while you focus on the rest.
       </span>
     ),
     style: "fill",

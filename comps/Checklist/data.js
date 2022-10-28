@@ -27,7 +27,7 @@ export const links = [
   },
   {
     head: "7 Day Support",
-    text: "We are available to make updates 7 days of the week.",
+    text: "We are available to make updates every day of the week.",
     icon: <Calendar />,
   },
 ];

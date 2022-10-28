@@ -24,7 +24,9 @@ export const Footer = ({ all, large, medium, small }) => {
             <Link href="/">Cowboy Interactive ™ </Link>
           </LogoUI>
           <Text all={"color: #fff; max-width: 500px; margin: 0 0 60px 0"}>
-            Helping you navigate the wild wild west.
+            We build, host and manage fully customized websites
+            <br />
+            starting at $250 CAD/mo.
           </Text>
           <Row>
             {social.map((item, i) => {
