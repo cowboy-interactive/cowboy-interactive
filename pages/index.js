@@ -131,8 +131,7 @@ export default function Home() {
               Just $250 CAD a month.
             </H2>
             <Text all={"margin: 0 0 60px 0; max-width: 500px;"} initial={{ opacity: 0 }}>
-              $0 down for a standard 5 page small business website. We have
-              additional plans if you need more. Cancel anytime with no fees or
+              $0 down for a standard 5 page small business website. Everything you need to grow your online presence. Cancel anytime with no fees or
               hassle.
             </Text>
 
@@ -171,7 +170,7 @@ export default function Home() {
               all={"margin: 0 0 60px 0; max-width: 500px;"}
               initial={{ opacity: 0 }}
             >
-              Choose a plan that fits your busniess needs
+              Choose a plan that fits your business needs
             </H2>
 
           </Container>

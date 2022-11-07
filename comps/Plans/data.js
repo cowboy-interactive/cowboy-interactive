@@ -1,50 +1,28 @@
 import {
   Activity,
   Calendar,
+  Database,
+  Image,
+  Layout,
   Mail,
   Map,
   Monitor,
   Paperclip,
   PenTool,
   Phone,
+  ShoppingBag,
   Tool,
 } from "react-feather";
 
 export const links = [
-  /*   {
-    head: "Standard + Content",
-    price: "$1250 CAD",
-    text: "Regularly posting content can grow your audience and organic reach. We got you covered.",
-    style: "outline",
-    url: "/",
-    icon: <Calendar />,
-    list: [
-      {
-        head: "Google Ad Campaign",
-        icon: <Monitor />,
-      },
-      {
-        head: "Social Media Marketing",
-        icon: <PenTool />,
-      },
-      {
-        head: "Search Engine Optimization",
-        icon: <Activity />,
-      },
-      {
-        head: "Brand Strategy",
-        icon: <Calendar />,
-      },
-    ],
-    image: "/planning.jpg",
-  }, */
   {
     head: "Standard",
     price: "$250 CAD",
     text: (
       <span>
         Our standard 5 page website. <br /> Let us take care of your website,
-        <br />while you focus on the rest.
+        <br />
+        while you focus on the rest.
       </span>
     ),
     style: "fill",
@@ -57,7 +35,7 @@ export const links = [
       },
       {
         head: "Web Design & Development",
-        icon: <PenTool />,
+        icon: <Layout />,
       },
       {
         head: "Google Analytics",
@@ -85,8 +63,8 @@ export const links = [
     icon: <Tool />,
     list: [
       {
-        head: "Content Managment",
-        icon: <Monitor />,
+        head: "Content Management",
+        icon: <Database />,
       },
       {
         head: "Logo Design",
@@ -94,11 +72,11 @@ export const links = [
       },
       {
         head: "Custom Graphics",
-        icon: <Activity />,
+        icon: <Image />,
       },
       {
-        head: "Eccomerce",
-        icon: <Calendar />,
+        head: "Ecommerce",
+        icon: <ShoppingBag />,
       },
     ],
     image: "/contracting.jpg",

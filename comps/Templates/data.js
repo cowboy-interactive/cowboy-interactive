@@ -3,7 +3,7 @@ import { Calendar, Paperclip, Tool } from "react-feather";
 export const links = [
   {
     head: "Contractor Pro™",
-    text: "For your contracting, landscaping and contruction business. Our website is designed to get you leads.",
+    text: "For your contracting, landscaping and construction business. Our website is designed to get you leads.",
     url: "https://contractor-pro-template.vercel.app/",
     icon: <Calendar />,
     target: "_blank",
