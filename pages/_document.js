@@ -39,6 +39,7 @@ class MyDocument extends Document {
             name="description"
             content="Cowboy Interactive · Affordable web design and development for general contractors. We build, host and manage your custom website starting at $250/mo."
           ></meta>
+          <meta property="og:image" content="https://cowboy-interactive-website.s3.us-west-2.amazonaws.com/og-image-01.png" />
         </Head>
         <body>
           <Main />
