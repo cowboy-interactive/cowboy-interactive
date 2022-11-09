@@ -60,7 +60,7 @@ export default function Home() {
             >
               We build, host and manage fully customized websites
               <br />
-              starting at $250 CAD/mo.
+              starting at $250 CAD a month.
             </Text>
             <Container
               all={"flex-direction: row"}

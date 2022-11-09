@@ -26,7 +26,7 @@ export const Footer = ({ all, large, medium, small }) => {
           <Text all={"color: #fff; max-width: 500px; margin: 0 0 60px 0"}>
             We build, host and manage fully customized websites
             <br />
-            starting at $250 CAD/mo.
+            starting at $250 CAD a month.
           </Text>
           <Row>
             {social.map((item, i) => {
