@@ -4,7 +4,7 @@ export const links = [
   {
     head: "Contractor Pro™",
     text: "For your contracting, landscaping and construction business. Our website is designed to get you leads.",
-    url: "https://contractor-pro-template.vercel.app/",
+    url: "https://contractor-pro-xi.vercel.app/",
     icon: <Calendar />,
     target: "_blank",
     image: "/contractor.jpg",
