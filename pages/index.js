@@ -55,12 +55,10 @@ export default function Home() {
               Web Design and Development <br /> for your small business.
             </H1>
             <Text
-              all={"margin: 0 0 60px 0; max-width: 500px;"}
+              all={"margin: 0 0 60px 0; max-width: 400px;"}
               initial={{ opacity: 0 }}
             >
-              We build, host and manage fully customized websites
-              <br />
-              starting at $250 CAD a month.
+              We build, host and manage your custom website starting at $250 CAD a month.
             </Text>
             <Container
               all={"flex-direction: row"}
@@ -130,9 +128,13 @@ export default function Home() {
               <br />
               Just $250 CAD a month.
             </H2>
-            <Text all={"margin: 0 0 60px 0; max-width: 500px;"} initial={{ opacity: 0 }}>
-              $0 down for a standard 5 page small business website. Everything you need to grow your online presence. Cancel anytime with no fees or
-              hassle.
+            <Text
+              all={"margin: 0 0 60px 0; max-width: 500px;"}
+              initial={{ opacity: 0 }}
+            >
+              $0 down for a standard 5 page small business website. Everything
+              you need to grow your online presence. Cancel anytime with no fees
+              or hassle.
             </Text>
 
             <Checklist
@@ -172,16 +174,15 @@ export default function Home() {
             >
               Choose a plan that fits your business needs
             </H2>
-
           </Container>
           <Plans />
-            <Button
-              href={"/contact"}
-              all={`background: ${themes.button}; color: #fff; border: none`}
-              initial={{ opacity: 0 }}
-            >
-              Get a Free Quote
-            </Button>
+          <Button
+            href={"/contact"}
+            all={`background: ${themes.button}; color: #fff; border: none`}
+            initial={{ opacity: 0 }}
+          >
+            Get a Free Quote
+          </Button>
         </Section>
 
         <Section
