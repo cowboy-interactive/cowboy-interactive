@@ -71,7 +71,7 @@ export default function Home() {
                 all={`background: ${themes.button}; color: #fff; border: none`}
                 initial={{ opacity: 0 }}
               >
-                Get a Quote
+                Get a Free Quote
               </Button>
             </Container>
           </Container>
@@ -147,7 +147,7 @@ export default function Home() {
               all={`background: ${themes.button}; color: #fff; border: none;`}
               initial={{ opacity: 0 }}
             >
-              Get a Quote
+              Get a Free Quote
             </Button>
           </Container>
           <Img src="/town.svg" alt="interior room" initial={{ opacity: 0 }} />
@@ -180,7 +180,7 @@ export default function Home() {
               all={`background: ${themes.button}; color: #fff; border: none`}
               initial={{ opacity: 0 }}
             >
-              Get a Quote
+              Get a Free Quote
             </Button>
         </Section>
 
