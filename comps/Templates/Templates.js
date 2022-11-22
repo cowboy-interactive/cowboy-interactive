@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import Link from "next/link";
 import { links } from "./data";
-import { sizes, themes } from "../../utils/variables";
+import { sizes } from "../../utils/variables";
 import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import { Img } from "../Img";
@@ -66,7 +65,7 @@ const Card = styled(motion.a)`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);

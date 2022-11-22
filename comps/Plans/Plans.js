@@ -144,7 +144,7 @@ const Card = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 15px;
   flex-direction: column;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);

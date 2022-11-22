@@ -58,7 +58,8 @@ export default function Home() {
               all={"margin: 0 0 60px 0; max-width: 400px;"}
               initial={{ opacity: 0 }}
             >
-              We build, host and manage your custom website starting at $250 CAD a month.
+              We build, host and manage your custom website starting at $250 CAD
+              a month.
             </Text>
             <Container
               all={"flex-direction: row"}
@@ -152,7 +153,7 @@ export default function Home() {
               Get a Free Quote
             </Button>
           </Container>
-          <Img src="/town.svg" alt="interior room" initial={{ opacity: 0 }} />
+          <Img src="/images/town.svg" alt="western town illustration" initial={{ opacity: 0 }} />
         </Section>
 
         <Section

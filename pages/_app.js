@@ -1,8 +1,8 @@
-import { Footer } from "../comps/Footer/Footer";
 import "../styles/globals.css";
 import "../styles/reset.css";
 import AppProvider from "../utils/provider";
 import Head from "next/head";
+import { Footer } from "../comps/Footer/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (

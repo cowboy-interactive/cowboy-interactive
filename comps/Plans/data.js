@@ -27,7 +27,6 @@ export const links = [
     ),
     style: "fill",
     url: "/",
-    icon: <Paperclip />,
     list: [
       {
         head: "Hosting Fees Included",
@@ -46,7 +45,6 @@ export const links = [
         icon: <Calendar />,
       },
     ],
-    image: "/management.jpg",
   },
   {
     head: "Custom",
@@ -60,7 +58,6 @@ export const links = [
     ),
     style: "standard",
     url: "/",
-    icon: <Tool />,
     list: [
       {
         head: "Content Management",
@@ -79,6 +76,5 @@ export const links = [
         icon: <ShoppingBag />,
       },
     ],
-    image: "/contracting.jpg",
   },
 ];

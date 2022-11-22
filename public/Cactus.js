@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import useScrollTop from "../hooks/useScrollTop";
+import { useFrame } from "@react-three/fiber";
 var lerp = require("lerp");
 
 export default function Cactus({ px, py, pz, ry, scrollTop }) {

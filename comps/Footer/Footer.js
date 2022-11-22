@@ -32,9 +32,9 @@ export const Footer = ({ all, large, medium, small }) => {
             {social.map((item, i) => {
               return (
                 <Icon key={i}>
-                  <Link href={item.url} target={item.target}>
+                  <a href={item.url} target={item.target}>
                     {item.icon}
-                  </Link>
+                  </a>
                 </Icon>
               );
             })}
@@ -48,9 +48,9 @@ export const Footer = ({ all, large, medium, small }) => {
           {links.map((item, i) => {
             return (
               <LinkUI key={i}>
-                <Link href={item.url} target={item.target}>
+                <a href={item.url} target={item.target}>
                   {item.head}
-                </Link>
+                </a>
               </LinkUI>
             );
           })}
@@ -139,6 +139,7 @@ const Column = styled.div`
 const Icon = styled.div`
   color: white;
   margin: 0 20px 0 0;
+  cursor: pointer;
 `;
 
 const Card = styled.div`

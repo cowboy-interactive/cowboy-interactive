@@ -7,20 +7,20 @@ export const links = [
     url: "https://contractor-pro-xi.vercel.app/",
     icon: <Calendar />,
     target: "_blank",
-    image: "/contractor.jpg",
+    image: "/images/contractor.jpg",
   },
   {
     head: "Restaurant Pro™",
     text: "Coming Soon...",
     icon: <Paperclip />,
     target: "",
-    image: "/beer.svg",
+    image: "/images/beer.svg",
   },
   {
     head: "Agency Pro™",
     text: "Coming Soon...",
     icon: <Tool />,
     target: "_blank",
-    image: "/cowboy.svg",
+    image: "/images/cowboy.svg",
   },
 ];

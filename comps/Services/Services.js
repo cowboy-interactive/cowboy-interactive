@@ -61,7 +61,7 @@ const Card = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);

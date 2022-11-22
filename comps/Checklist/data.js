@@ -1,12 +1,8 @@
 import {
   Activity,
   Calendar,
-  Clock,
-  Mail,
-  Map,
   Monitor,
-  PenTool,
-  Phone,
+  Layout
 } from "react-feather";
 
 export const links = [
@@ -18,7 +14,7 @@ export const links = [
   {
     head: "Web Design & Development",
     text: "Includes continuous design, development, and testing so your website never goes out of date.",
-    icon: <PenTool />,
+    icon: <Layout />,
   },
   {
     head: "Google Analytics",
