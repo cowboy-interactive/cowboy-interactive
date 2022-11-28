@@ -38,7 +38,7 @@ export const Img = ({
 
 const Cont = styled(motion.div)`
   ${(props) => props.all};
-  display: flex;
+
 
   @media (max-width: ${sizes.large}) {
     ${(props) => props.large};

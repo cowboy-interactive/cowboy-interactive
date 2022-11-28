@@ -68,14 +68,18 @@ export const Plans = ({
                       <Text all="margin: 0 0 0 10px;">/mo</Text>
                     )}
                   </Price>
-                  <Text all={"margin: 0 0 60px 0; width: 100%;"} xsmall={"width: 90%;"}>
+                  <Text
+                    all={"margin: 0 0 60px 0; width: 100%;"}
+                    xsmall={"width: 90%;"}
+                  >
                     {item.text}
                   </Text>
 
                   <List>
-                    {item.list.map((listItem) => {
+                    {item.list.map((listItem, key) => {
                       return (
                         <ListItem
+                          key={key}
                           color={
                             item.style == "fill"
                               ? "white"
@@ -133,7 +137,6 @@ const Grid = styled.div`
   width: 100%;
   margin: 0 0 40px 0;
 
-
   @media (max-width: ${sizes.small}) {
     grid-template-columns: 2fr;
     grid-gap: 60px;
@@ -154,7 +157,6 @@ const Card = styled.div`
   color: ${({ color }) => color};
   border: 2px solid ${({ border }) => border};
 
-
   @media (max-width: ${sizes.small}) {
     justify-content: center;
     align-items: center;
@@ -174,12 +176,11 @@ const Column = styled.div`
   @media (max-width: ${sizes.small}) {
     justify-content: flex-start;
     align-items: center;
-
   }
 
   @media (max-width: ${sizes.xsmall}) {
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items: flex-start;
     text-align: left;
     width: 80%;
   }
@@ -210,7 +211,6 @@ const List = styled.div`
   flex-direction: column;
   display: flex;
   width: 100%;
-
 `;
 
 const Icon = styled.div`

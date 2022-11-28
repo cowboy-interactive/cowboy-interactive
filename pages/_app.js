@@ -3,6 +3,7 @@ import "../styles/reset.css";
 import AppProvider from "../utils/provider";
 import Head from "next/head";
 import { Footer } from "../comps/Footer/Footer";
+import { Navbar } from "../comps/Navbar/Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -26,6 +27,10 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
+      <Navbar
+        all={"height: 80px; width: 80vw; max-width: 1600px; "}
+        medium={"width: 90vw;"}
+      />
       <Component {...pageProps} />
       <Footer />
     </AppProvider>

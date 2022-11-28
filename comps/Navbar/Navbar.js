@@ -60,9 +60,14 @@ export const Navbar = ({ all, large, medium, small }) => {
       </Cont>
       {showMenu ? (
         <MobileMenuUI theme={theme} themes={themes}>
-          <Link href="/#work">
+          <Link href="/">
             <MobileLinkUI theme={theme} themes={themes}>
               Home
+            </MobileLinkUI>
+          </Link>
+          <Link href="/blog">
+            <MobileLinkUI theme={theme} themes={themes}>
+              Blog
             </MobileLinkUI>
           </Link>
           <Link href="/contact">
@@ -174,6 +179,7 @@ const NavUI = styled.div`
 
 const LinkUI = styled.div`
   margin-left: 40px;
+  font-weight: 500;
 `;
 
 const MobileUI = styled.div`
