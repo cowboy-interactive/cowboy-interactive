@@ -46,10 +46,6 @@ export default function Home({ posts }) {
   const windowSize = useWindowSize();
   const [position] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    console.log(posts);
-  }, []);
-
   return (
     <Container all={"align-items: center"}>
       <Scene
