@@ -51,10 +51,10 @@ export default function Home({ posts }) {
               Blog Posts
             </H3>
             <H2
-              all={"margin: 0 0 60px 0; max-width: 500px;"}
+              all={"margin: 0 0 60px 0; max-width: 800px;"}
               initial={{ opacity: 0 }}
             >
-              Learn how you can improve your website.
+              Learn how we can help you improve your website and reach more customers.
             </H2>
             <BlogPosts posts={posts} />
           </Container>

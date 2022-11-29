@@ -19,34 +19,33 @@ export const BlogPosts = ({
 }) => {
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
-      {posts.map(({ slug, frontmatter }) => (
+      {posts.reverse().map(({ slug, frontmatter }) => (
         <Link href={`/posts/${slug}`}>
-        <Card
-          href={frontmatter.url}
-          target={frontmatter.target}
-          key={slug}
-          initial={initial}
-          whileInView={whileInView}
-          viewport={viewport}
-          transition={{ ease: "easeOut", duration: 1, delay: slug / 4 }}
-        >
-          <ImageCont>
-            <Img
-              src={frontmatter.image}
-              alt={frontmatter.title}
-              all={"transition: 0.2s ease;"}
-              width={1400}
-              height={900}
-            />
-          </ImageCont>
+          <Card
+            href={frontmatter.url}
+            target={frontmatter.target}
+            key={slug}
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+          >
+            <ImageCont>
+              <Img
+                src={frontmatter.image}
+                alt={frontmatter.title}
+                all={"transition: 0.2s ease;"}
+                width={300}
+                height={300}
+              />
+            </ImageCont>
 
-          <Column>
-            <H3 all={"margin: 0 0 20px 0"}>{frontmatter.title}</H3>
-            <Text all={"max-width: 600px; text-align: left;"}>
-              {frontmatter.date}
-            </Text>
-          </Column>
-        </Card>
+            <Column>
+              <H3 all={"margin: 0 0 20px 0"}>{frontmatter.title}</H3>
+              <Text all={"max-width: 600px; text-align: left;"}>
+                {frontmatter.date}
+              </Text>
+            </Column>
+          </Card>
         </Link>
       ))}
     </Cont>
@@ -101,6 +100,8 @@ const ImageCont = styled.div`
   transition: 0.2s ease;
   display: flex;
   overflow: hidden;
+  justify-content: center;
+  width: 100%;
   &:hover > div {
     transform: scale(110%);
   }

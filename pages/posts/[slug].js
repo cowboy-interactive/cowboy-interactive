@@ -6,8 +6,8 @@ import { Container } from "../../comps/Container";
 import { Img } from "../../comps/Img";
 import { Section } from "../../comps/Section";
 import { H1 } from "../../comps/Text/H1";
-import Image from "next/image";
 import { themes } from "../../utils/variables";
+import { H3 } from "../../comps/Text/H3";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync("posts");
@@ -33,25 +33,41 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
+const toDate = (dateStr) => {
+  var numbers = dateStr.match(/\d+/g); 
+  var date = new Date(numbers[2], numbers[0]-1, numbers[1]);
+  return date
+};
+
 export default function PostPage({ frontmatter, content }) {
   return (
     <Container all={"align-items: center"}>
       <Section
         all={
-          "margin: 180px 0 100px 0; width: 50vw; max-width: 1600px; align-items: center; flex-direction: column;"
+          "margin: 180px 0 40px 0; width: 50vw; max-width: 1600px; align-items: center; flex-direction: column;"
+        }
+        medium={"width: 90vw; align-items: center; flex-direction: column;"}
+        small={"width: 90vw;"}
+      >
+        <H1>
+          {frontmatter.title} <H3 all={'margin: 20px 0 0 0'}>{frontmatter.date}</H3>
+        </H1>
+
+        <Img
+          src={frontmatter.image}
+          alt="western town illustration"
+          initial={{ opacity: 0 }}
+          width={300}
+          height={300}
+        />
+      </Section>
+      <Section
+        all={
+          "margin: 0px 0 100px 0; width: 50vw; max-width: 1600px; align-items: center; flex-direction: column;"
         }
         medium={"width: 90vw; align-items: center;"}
         small={"width: 90vw;"}
       >
-        <H1>{frontmatter.title}</H1>
-        <Img
-          all={"margin: 0 0 40px 0;"}
-          src={frontmatter.image}
-          alt="western town illustration"
-          initial={{ opacity: 0 }}
-          width={2100}
-          height={1350}
-        />
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         <Button
           href={"/contact"}
