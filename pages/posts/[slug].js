@@ -34,9 +34,9 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const toDate = (dateStr) => {
-  var numbers = dateStr.match(/\d+/g); 
-  var date = new Date(numbers[2], numbers[0]-1, numbers[1]);
-  return date
+  var numbers = dateStr.match(/\d+/g);
+  var date = new Date(numbers[2], numbers[0] - 1, numbers[1]);
+  return date;
 };
 
 export default function PostPage({ frontmatter, content }) {
@@ -50,7 +50,8 @@ export default function PostPage({ frontmatter, content }) {
         small={"width: 90vw;"}
       >
         <H1>
-          {frontmatter.title} <H3 all={'margin: 20px 0 0 0'}>{frontmatter.date}</H3>
+          {frontmatter.title}{" "}
+          <H3 all={"margin: 20px 0 0 0"}>{frontmatter.date}</H3>
         </H1>
 
         <Img
@@ -62,11 +63,8 @@ export default function PostPage({ frontmatter, content }) {
         />
       </Section>
       <Section
-        all={
-          "margin: 0px 0 100px 0; width: 50vw; max-width: 1600px; align-items: center; flex-direction: column;"
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 90vw;"}
+        all={"margin: 0px 0 100px 0; width: 50vw; flex-direction: column;"}
+
       >
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         <Button

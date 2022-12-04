@@ -32,7 +32,9 @@ export const H2 = ({
 const Cont = styled(motion.h2)`
   font-size: 36px;
   font-weight: 700;
-  width:  100%;
+  width: 100%;
+  margin: 0 0 20px 0;
+  max-width: 700px;
 
   ${(props) => props.all};
 

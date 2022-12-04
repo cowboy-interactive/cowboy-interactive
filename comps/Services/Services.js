@@ -29,7 +29,7 @@ export const Services = ({
             viewport={viewport}
             transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
           >
-            <Img src={item.image} alt={item.head} all={"margin: 0 0 20px 0;"} />
+            <Img src={item.image} alt={item.head} all={"margin: 0 0 20px 0; max-width: 350px;"} />
             <Column>
               <H3 all={"margin: 0 0 20px 0; text-align: center;"}>
                 {item.head}

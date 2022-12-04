@@ -37,7 +37,7 @@ export default function Home({ posts }) {
             "margin: 180px 0 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
-          small={"width: 90vw; flex-direction: column;"}
+          small={"flex-direction: column;"}
         >
           <Container
             all={"align-items: space-between; "}

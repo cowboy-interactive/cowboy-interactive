@@ -7,10 +7,20 @@ import ThemeSwitch from "../ThemeSwitch";
 import { useTheme } from "../../utils/provider";
 import { useState } from "react";
 import { Facebook, Instagram, Linkedin, Menu, X } from "react-feather";
+import { useRouter } from "next/router";
 
 export const Navbar = ({ all, large, medium, small }) => {
   const { theme } = useTheme();
   const [showMenu, setShowMenu] = useState(false);
+
+  const router = useRouter();
+
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    router.push(href).then(() => {
+      setShowMenu(false);
+    });
+  };
 
   return (
     <>
@@ -60,28 +70,34 @@ export const Navbar = ({ all, large, medium, small }) => {
       </Cont>
       {showMenu ? (
         <MobileMenuUI theme={theme} themes={themes}>
-          <Link href="/">
-            <MobileLinkUI theme={theme} themes={themes}>
-              Home
-            </MobileLinkUI>
-          </Link>
-          <Link href="/blog">
-            <MobileLinkUI theme={theme} themes={themes}>
-              Blog
-            </MobileLinkUI>
-          </Link>
-          <Link href="/contact">
-            <MobileLinkUI theme={theme} themes={themes}>
-              Contact Us
-            </MobileLinkUI>
-          </Link>
+          <MobileLinkUI
+            theme={theme}
+            themes={themes}
+            onClick={(e) => handleClick(e, "/")}
+          >
+            Home
+          </MobileLinkUI>
+          <MobileLinkUI
+            theme={theme}
+            themes={themes}
+            onClick={(e) => handleClick(e, "/blog")}
+          >
+            Blog
+          </MobileLinkUI>
+          <MobileLinkUI
+            theme={theme}
+            themes={themes}
+            onClick={(e) => handleClick(e, "/contact")}
+          >
+            Contact Us
+          </MobileLinkUI>
 
           <Row all={"margin: 20px 0 0 0"}>
             <MobileIcon
               theme={theme}
               themes={themes}
               target="_blank"
-              href="https://github.com/julianmayes"
+              href="https://www.instagram.com/cowboyinteractive/"
               onClick={() => setShowMenu(false)}
             >
               <Instagram size={24} />
@@ -90,16 +106,7 @@ export const Navbar = ({ all, large, medium, small }) => {
               theme={theme}
               themes={themes}
               target="_blank"
-              href="https://www.linkedin.com/in/julian-mayes-b27898134/"
-              onClick={() => setShowMenu(false)}
-            >
-              <Linkedin size={24} />
-            </MobileIcon>
-            <MobileIcon
-              theme={theme}
-              themes={themes}
-              target="_blank"
-              href="https://www.linkedin.com/in/julian-mayes-b27898134/"
+              href="https://www.facebook.com/profile.php?id=100086089315730"
               onClick={() => setShowMenu(false)}
             >
               <Facebook size={24} />

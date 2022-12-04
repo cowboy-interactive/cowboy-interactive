@@ -34,7 +34,7 @@ export const H1 = ({
 const Cont = styled(motion.h1)`
   font-size: 64px;
   font-weight: 700;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 
   ${(props) => props.all};
 

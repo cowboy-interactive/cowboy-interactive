@@ -9,9 +9,13 @@ export const Section = ({ children, all, large, medium, small, xsmall }) => {
   );
 };
 
-const Cont = styled.div`
+const Cont = styled.section`
   display: flex;
   justify-content: space-between;
+  width: 80vw;
+  max-width: 1600px;
+  align-items: center;
+  margin: 100px 0;
 
   ${(props) => props.all};
 
@@ -20,10 +24,14 @@ const Cont = styled.div`
   }
 
   @media (max-width: ${sizes.medium}) {
+    width: 90vw;
+    
     ${(props) => props.medium};
   }
 
   @media (max-width: ${sizes.small}) {
+    flex-direction: column;
+
     ${(props) => props.small};
   }
 

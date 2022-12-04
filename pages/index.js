@@ -16,31 +16,9 @@ import { Scene } from "../comps/Scene";
 import useScrollTop from "../hooks/useScrollTop";
 import useWindowSize from "../hooks/useWindowSize";
 import { useTheme } from "../utils/provider";
-import { useState, useEffect } from "react";
-import fs from "fs";
-import matter from "gray-matter";
+import { useState } from "react";
 
-export async function getStaticProps() {
-  const files = fs.readdirSync("posts");
-
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
-    const { data: frontmatter } = matter(readFile);
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}
-
-export default function Home({ posts }) {
+export default function Home({}) {
   const { theme } = useTheme();
   const scrollTop = useScrollTop();
   const windowSize = useWindowSize();
@@ -53,13 +31,7 @@ export default function Home({ posts }) {
         scrollTop={scrollTop}
         position={position}
       />
-      <Section
-        all={
-          "margin: 180px 0 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 90vw; flex-direction: column;"}
-      >
+      <Section all={"margin: 180px 0 100px 0;"}>
         <Container
           all={"margin:0 40px 0 0;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
@@ -90,24 +62,13 @@ export default function Home({ posts }) {
         </Container>
       </Section>
 
-      <Section
-        all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; justify-content: center; "
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 90vw; flex-direction: column;"}
-      >
+      <Section>
         <Container
           all={"align-items: center; text-align: center; "}
-          small={
-            "margin-bottom: 60px; align-items: center; text-align: center;"
-          }
+          small={"margin-bottom: 60px;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H2
-            all={"margin: 0 0 40px 0; max-width: 700px;"}
-            initial={{ opacity: 0 }}
-          >
+          <H2 initial={{ opacity: 0 }}>
             We take care of all your website needs, so you can focus on your
             business.
           </H2>
@@ -124,13 +85,7 @@ export default function Home({ posts }) {
         </Container>
       </Section>
 
-      <Section
-        all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 90vw; flex-direction: column;"}
-      >
+      <Section>
         <Container
           all={"margin:0 40px 0 0; width: 50%;"}
           small={
@@ -138,7 +93,7 @@ export default function Home({ posts }) {
           }
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H2 all={"margin: 0 0 40px 0;"} initial={{ opacity: 0 }}>
+          <H2 initial={{ opacity: 0 }}>
             No sign up costs.
             <br />
             Just $250 CAD a month.
@@ -175,11 +130,9 @@ export default function Home({ posts }) {
       </Section>
 
       <Section
-        all={
-          "margin: 100px 0; width: 60vw; align-items: center; flex-direction: column;"
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 60vw; flex-direction: column;"}
+        all={"width: 60vw; flex-direction: column;"}
+        medium={"width: 90vw;"}
+        small={"width: 60vw;"}
         xsmall={"width: 90vw; align-items: flex-start;"}
       >
         <Container
@@ -204,13 +157,7 @@ export default function Home({ posts }) {
         </Button>
       </Section>
 
-      <Section
-        all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 90vw; flex-direction: column;"}
-      >
+      <Section>
         <Container
           all={"align-items: space-between; "}
           small={"align-items: center; text-align: center;"}
@@ -232,13 +179,7 @@ export default function Home({ posts }) {
         </Container>
       </Section>
 
-      <Section
-        all={
-          "margin: 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
-        }
-        medium={"width: 90vw; align-items: center;"}
-        small={"width: 90vw; flex-direction: column;"}
-      >
+      <Section>
         <ContactForm color={themes[theme]} />
       </Section>
     </Container>
