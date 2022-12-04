@@ -11,8 +11,8 @@ export const Text = ({
   xsmall,
   initial = { opacity: 1 },
   whileInView = { opacity: 1 },
-  viewport={ once: true },
-  transition={ ease: "easeOut", duration: 2 }
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 2 },
 }) => {
   return (
     <Cont
@@ -32,8 +32,9 @@ export const Text = ({
 };
 
 const Cont = styled(motion.p)`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 1.6;
 
   color: ${(props) => props.color};
   ${(props) => props.all};

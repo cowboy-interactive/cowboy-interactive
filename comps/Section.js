@@ -15,7 +15,7 @@ const Cont = styled.section`
   width: 80vw;
   max-width: 1600px;
   align-items: center;
-  margin: 100px 0;
+  margin: 80px 0;
 
   ${(props) => props.all};
 

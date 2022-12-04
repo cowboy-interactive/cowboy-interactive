@@ -37,7 +37,7 @@ export const Checklist = ({
             <Icon color={themes[theme].highlight}>{item.icon}</Icon>
             <Column>
               <H3 all={"margin: 0 0 5px 0;"}>{item.head}</H3>
-              <Text all={"max-width: 400px;"} color={color}>{item.text}</Text>
+              <Text all={"max-width: 400px; font-size: 16px;"} color={color}>{item.text}</Text>
             </Column>
           </Card>
         );

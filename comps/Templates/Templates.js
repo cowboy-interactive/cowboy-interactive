@@ -43,7 +43,9 @@ export const Templates = ({
 
             <Column>
               <H3 all={"margin: 0 0 20px 0"}>{item.head}</H3>
-              <Text all={"max-width: 600px; text-align: left;"}>
+              <Text
+                all={"max-width: 600px; text-align: left; font-size: 16px;"}
+              >
                 {item.text}
               </Text>
             </Column>

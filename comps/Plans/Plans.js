@@ -55,7 +55,7 @@ export const Plans = ({
                 color={item.style == "fill" ? "white" : themes[theme].secondary}
               >
                 <Column>
-                  <Text all="margin: 0 0 10px; 0;">Starting at</Text>
+                  <Text all="margin: 0 0 10px; 0; font-size: 16px;">Starting at</Text>
                   <Price
                     color={
                       item.style == "fill" ? "white" : themes[theme].highlight
@@ -65,7 +65,7 @@ export const Plans = ({
                     {item.price == "Inquire" ? (
                       ""
                     ) : (
-                      <Text all="margin: 0 0 0 10px;">/mo</Text>
+                      <Text all="margin: 0 0 0 10px; font-size: 16px;">/mo</Text>
                     )}
                   </Price>
                   <Text
@@ -187,7 +187,7 @@ const Column = styled.div`
 `;
 
 const Head = styled.div`
-  font-weight: 900;
+  font-weight: 500;
   font-size: 18px;
   color: ${({ color }) => color};
 `;

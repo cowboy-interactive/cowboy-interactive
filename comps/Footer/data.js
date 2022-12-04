@@ -1,4 +1,13 @@
-import { Calendar, Facebook, Instagram, Linkedin, Mail, Map, Paperclip, Tool } from "react-feather";
+import {
+  Calendar,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Map,
+  Paperclip,
+  Tool,
+} from "react-feather";
 
 export const links = [
   {
@@ -33,13 +42,4 @@ export const social = [
     icon: <Facebook />,
     target: "_blank",
   },
-/*   {
-    head: "Services",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Linkedin />,
-    target: "_blank",
-    image: "/interior-4.jpg",
-  }, */
-
 ];

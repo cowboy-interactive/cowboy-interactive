@@ -31,14 +31,14 @@ export default function Home({}) {
         scrollTop={scrollTop}
         position={position}
       />
-      <Section all={"margin: 180px 0 100px 0;"}>
+      <Section all={"margin: 180px 0 80px 0;"} xsmall={"align-items: flex-start;"}>
         <Container
           all={"margin:0 40px 0 0;"}
-          small={"margin:0 0 60px 0; align-items: center; text-align: center;"}
+          small={"margin:0 0 60px 0; align-items: center; text-align: center; "}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H1 initial={{ opacity: 0 }}>
-            Web Design and Development <br /> for your small business.
+          <H1 initial={{ opacity: 0 }} all="max-width: 1000px;" large="max-width: 700px;" xsmall="max-width: 400px;">
+            Web Design and Development for your small business.
           </H1>
           <Text
             all={"margin: 0 0 60px 0; max-width: 400px;"}
@@ -73,7 +73,7 @@ export default function Home({}) {
             business.
           </H2>
           <Text
-            all={"margin: 0 0 60px 0; max-width: 500px;"}
+            all={"margin: 0 0 60px 0; max-width: 550px;"}
             initial={{ opacity: 0 }}
           >
             We design and develop custom websites for small businesses anywhere

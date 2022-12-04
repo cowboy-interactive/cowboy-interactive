@@ -5,8 +5,8 @@ export const links = [
     image: "/images/cards.svg",
   },
   {
-    head: "Web Development and Design",
-    text: "All of our designs are built in house. We provide full customization to fit your business needs. Designs are constantly updated so your website is never out of date.",
+    head: "Web Design & Development",
+    text: "All of our designs are built in house. We provide full customization to fit your business needs. Designs are constantly updated so your website never goes out of date.",
     image: "/images/guns.svg",
   },
   {

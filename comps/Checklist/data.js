@@ -13,7 +13,7 @@ export const links = [
   },
   {
     head: "Web Design & Development",
-    text: "Includes continuous design, development, and testing so your website never goes out of date.",
+    text: "Includes continuous design, development, and testing.",
     icon: <Layout />,
   },
   {

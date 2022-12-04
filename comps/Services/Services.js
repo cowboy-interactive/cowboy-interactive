@@ -34,7 +34,7 @@ export const Services = ({
               <H3 all={"margin: 0 0 20px 0; text-align: center;"}>
                 {item.head}
               </H3>
-              <Text all={"max-width: 600px; text-align: center; max-width: 500px;"}>
+              <Text all={"max-width: 600px; text-align: center; max-width: 500px; font-size: 16px;"}>
                 {item.text}
               </Text>
             </Column>
