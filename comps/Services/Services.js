@@ -29,7 +29,7 @@ export const Services = ({
             viewport={viewport}
             transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
           >
-            <Img src={item.image} alt={item.head} all={"margin: 0 0 20px 0; max-width: 350px;"} />
+            <Img src={item.image} alt={item.head} all={"margin: 0 0 20px 0;"} />
             <Column>
               <H3 all={"margin: 0 0 20px 0; text-align: center;"}>
                 {item.head}
@@ -66,7 +66,7 @@ const Card = styled(motion.div)`
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(50px);
-  padding: 60px;
+
 `;
 
 const Column = styled.div`
@@ -77,4 +77,6 @@ const Column = styled.div`
   position: relative;
   z-index: 100;
   text-align: left;
+  padding: 0 40px 40px 40px;
+  margin-top: -30px;
 `;

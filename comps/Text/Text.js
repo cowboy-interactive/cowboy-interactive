@@ -35,8 +35,8 @@ const Cont = styled(motion.p)`
   font-size: 18px;
   font-weight: 500;
   line-height: 1.6;
-
   color: ${(props) => props.color};
+  
   ${(props) => props.all};
 
   @media (max-width: ${sizes.medium}) {

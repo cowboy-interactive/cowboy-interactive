@@ -11,7 +11,7 @@ export default function Cactus({ px, py, pz, ry, scrollTop }) {
       (group.current.position.y = py),
       (group.current.position.z = lerp(
         group.current.position.z,
-        pz + scrollTop * 0.02,
+        pz + scrollTop * 0.05,
         0.1
       )),
       (group.current.rotation.y = ry)

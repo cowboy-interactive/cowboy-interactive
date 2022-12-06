@@ -6,6 +6,7 @@ import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import { useTheme } from "../../utils/provider";
 import { ContactCard } from "../ContactCard/ContactCard";
+import { Container } from "../Container";
 
 export const Footer = ({ all, large, medium, small }) => {
   const { theme } = useTheme();
@@ -21,12 +22,12 @@ export const Footer = ({ all, large, medium, small }) => {
       <Content>
         <Column>
           <LogoUI>
-            <Link href="/">Cowboy Interactive ™ </Link>
+            <Link href="/">Cowboy Interactive</Link>
           </LogoUI>
-          <Text all={"color: #fff; max-width: 500px; margin: 0 0 60px 0"}>
+          <Text all={"color: #fff; max-width: 500px; margin: 0 0 40px 0"}>
             We build, host and manage fully customized websites
             <br />
-            starting at $250 CAD a month.
+            starting at $250 a month.
           </Text>
           <Row>
             {social.map((item, i) => {
@@ -42,7 +43,7 @@ export const Footer = ({ all, large, medium, small }) => {
         </Column>
 
         <Column>
-          <H3 all={"color: #fff; max-width: 500px; margin: 0 0 40px 0;"}>
+          <H3 all={"color: #fff; max-width: 500px; margin: 0 0 20px 0;"}>
             Links
           </H3>
           {links.map((item, i) => {
@@ -56,22 +57,26 @@ export const Footer = ({ all, large, medium, small }) => {
           })}
         </Column>
 
-        <ContactCard
-          color="#fff"
-          all={"flex-direction: column; align-items: flex-end;"}
-          medium={"align-items: flex-start;"}
-          initial={{ opacity: 1 }}
-        />
-      </Content>
-
-      <Bottom>
-        <Text
-          all={"color: #fff; max-width: 500px; margin: 0px;"}
-          medium={"margin: 20px 0;"}
+        <Container
+          all="justify-content: space-between; align-items: flex-end;"
+          medium="justify-content: flex-start; align-items: flex-start;"
         >
-          © 2022 Cowboy Interactive. All rights reserved.
-        </Text>
-      </Bottom>
+          <ContactCard
+            color="#fff"
+            all={"flex-direction: column; align-items: flex-end;"}
+            medium={"align-items: flex-start;"}
+            initial={{ opacity: 1 }}
+          />
+          <Text
+            all={
+              "color: #fff; min-width: 390px; margin: 0px; text-align: right; font-size: 16px;"
+            }
+            medium={"text-align: left; margin: 40px 0 0 0"}
+          >
+            © 2022 Cowboy Interactive. All rights reserved.
+          </Text>
+        </Container>
+      </Content>
     </Cont>
   );
 };
@@ -108,23 +113,7 @@ const Row = styled.div`
   display: flex;
 `;
 
-const Bottom = styled.div`
-  margin: 60px 0 0 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: space-between;
-  width: 80%;
-  position: relative;
-  @media (max-width: ${sizes.medium}) {
-    flex-direction: column;
-    width: 90%;
-  }
 
-  @media (max-width: ${sizes.medium}) {
-    flex-direction: column;
-    width: 90%;
-  }
-`;
 
 const Column = styled.div`
   margin-bottom: auto;
@@ -132,7 +121,7 @@ const Column = styled.div`
   width: 100%;
 
   @media (max-width: ${sizes.medium}) {
-    margin: 0 0 60px 0;
+    margin: 0 0 40px 0;
   }
 `;
 
@@ -155,7 +144,7 @@ const Card = styled.div`
 
 const LinkUI = styled.div`
   color: white;
-  margin: 0 0 20px 0;
+  margin: 20px 0 0px 0;
 `;
 
 const LogoUI = styled.div`
@@ -164,5 +153,5 @@ const LogoUI = styled.div`
   font-weight: 400;
   font-size: 24px;
   color: #fff;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 `;

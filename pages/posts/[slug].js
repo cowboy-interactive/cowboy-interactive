@@ -64,12 +64,13 @@ export default function PostPage({ frontmatter, content }) {
       </Section>
       <Section
         all={"margin: 0px 0 100px 0; width: 50vw; flex-direction: column;"}
+        xsmall={"align-items: flex-start; text-align: left;"}
 
       >
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         <Button
           href={"/contact"}
-          all={`background: ${themes.button}; color: #fff; border: none; margin: 100px 0 0 0;`}
+          all={`background: ${themes.button}; color: #fff; border: none; margin: 60px 0 0 0;`}
           initial={{ opacity: 0 }}
         >
           Get a Free Quote

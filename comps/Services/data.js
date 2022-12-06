@@ -7,11 +7,11 @@ export const links = [
   {
     head: "Web Design & Development",
     text: "All of our designs are built in house. We provide full customization to fit your business needs. Designs are constantly updated so your website never goes out of date.",
-    image: "/images/guns.svg",
+    image: "/images/horse.svg",
   },
   {
     head: "Website Analytics",
     text: "We keep track of your websites to see where your customers are coming from. Using analytics provides valuable insights that can help you to shape the success strategy of your business.",
-    image: "/images/horse.svg",
+    image: "/images/badge.svg",
   },
 ];

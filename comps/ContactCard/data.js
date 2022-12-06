@@ -1,4 +1,4 @@
-import { Mail, Map, Phone } from "react-feather";
+import { Mail } from "react-feather";
 
 export const links = [
   {

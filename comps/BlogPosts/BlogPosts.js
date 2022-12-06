@@ -17,6 +17,10 @@ export const BlogPosts = ({
   transition = { ease: "easeOut", duration: 1 },
   posts,
 }) => {
+  const formatSmallImage = (x) => {
+    return x.slice(0, -4) + "-small.png";
+  };
+
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
       {posts.reverse().map(({ slug, frontmatter }) => (
@@ -31,11 +35,11 @@ export const BlogPosts = ({
           >
             <ImageCont>
               <Img
-                src={frontmatter.image}
+                src={formatSmallImage(frontmatter.image)}
                 alt={frontmatter.title}
                 all={"transition: 0.2s ease;"}
-                width={300}
-                height={300}
+                width={700}
+                height={450}
               />
             </ImageCont>
 

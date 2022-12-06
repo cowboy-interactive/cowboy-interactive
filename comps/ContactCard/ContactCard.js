@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { links } from "./data";
 import { sizes, themes } from "../../utils/variables";
-import { useTheme } from "../../utils/provider";
-import { H3 } from "../Text/H3";
 import { Text } from "../Text/Text";
 import { motion } from "framer-motion";
 
@@ -39,7 +37,7 @@ export const ContactCard = ({
                 >
                   {item.head}
                 </Head>
-                <Text color={color}>
+                <Text color={color} all="font-size: 16px;">
                   {item.text}
                 </Text>
               </Column>

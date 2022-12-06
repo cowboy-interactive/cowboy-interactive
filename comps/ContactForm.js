@@ -90,8 +90,8 @@ export const ContactForm = ({
         <ColumnUI>
           <H2 all={"margin: 0 0 20px 0;"}>Get in touch.</H2>
           <Text all={"max-width: 500px;"}>
-            Let us know what you would like to work on. We will get back to you
-            as soon as we can!
+            Contact us to get a free audit of your current website. We will get
+            back to you as soon as we can!
           </Text>
           {contact && (
             <ContactCard
@@ -126,13 +126,13 @@ export const ContactForm = ({
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <H3>Your Message</H3>
+          <H3>Your Website</H3>
 
           <InputUI
             color={color}
             type="text"
             name="message"
-            placeholder="Your Message"
+            placeholder="Your Website"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />

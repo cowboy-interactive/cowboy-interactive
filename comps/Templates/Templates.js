@@ -34,9 +34,7 @@ export const Templates = ({
                 src={item.image}
                 alt={item.head}
                 all={
-                  item.text == "Coming Soon..."
-                    ? "max-width: 400px; transition: 0.2s ease;"
-                    : "transition: 0.2s ease;"
+"transition: 0.2s ease;"
                 }
               />
             </ImageCont>
@@ -106,9 +104,8 @@ const ImageCont = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  backfground: red;
   width: 100%;
-  height: 60%;
+
   &:hover > div {
     transform: scale(110%);
   }

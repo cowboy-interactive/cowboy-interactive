@@ -44,7 +44,7 @@ export default function Home({}) {
             all={"margin: 0 0 60px 0; max-width: 400px;"}
             initial={{ opacity: 0 }}
           >
-            We build, host and manage your custom website starting at $250 CAD a
+            We build, host and manage your custom website starting at $250 a
             month.
           </Text>
           <Container
@@ -76,8 +76,7 @@ export default function Home({}) {
             all={"margin: 0 0 60px 0; max-width: 550px;"}
             initial={{ opacity: 0 }}
           >
-            We design and develop custom websites for small businesses anywhere
-            in Canada. Our code is hand-written to ensure the best performance
+            We design and develop custom websites for small businesses. Our code is hand-written to ensure the best performance
             possible, bringing more customers to your website and more revenue
             to your business.
           </Text>
@@ -96,7 +95,7 @@ export default function Home({}) {
           <H2 initial={{ opacity: 0 }}>
             No sign up costs.
             <br />
-            Just $250 CAD a month.
+            Just $250 a month.
           </H2>
           <Text
             all={"margin: 0 0 60px 0; max-width: 500px;"}

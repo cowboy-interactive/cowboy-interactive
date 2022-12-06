@@ -18,6 +18,14 @@ export const links = [
     target: "",
     image: "/interior-2.jpg",
   },
+  {
+    head: "Blog",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
+    url: "/",
+    icon: <Paperclip />,
+    target: "",
+    image: "/interior.jpg",
+  },
 
   {
     head: "Contact Us",

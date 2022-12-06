@@ -4,20 +4,15 @@ import {
   Database,
   Image,
   Layout,
-  Mail,
-  Map,
   Monitor,
-  Paperclip,
   PenTool,
-  Phone,
   ShoppingBag,
-  Tool,
 } from "react-feather";
 
 export const links = [
   {
     head: "Standard",
-    price: "$250 CAD",
+    price: "$250",
     text: (
       <span>
         Our standard 5 page website. <br /> Let us take care of your website,
