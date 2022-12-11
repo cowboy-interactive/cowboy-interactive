@@ -1,7 +1,7 @@
 export const links = [
   {
     head: "Website Optimization",
-    text: "We make sure that your websites accessibility, performance and search engine standards are kept up to date. We do this ensure that you are getting the most organic traffic possible.",
+    text: "We make sure that your websites accessibility, performance and search engine standards are kept up to date. We do this to ensure that you are getting the most organic traffic possible.",
     image: "/images/cards.svg",
   },
   {

@@ -69,7 +69,7 @@ export const Footer = ({ all, large, medium, small }) => {
           />
           <Text
             all={
-              "color: #fff; min-width: 390px; margin: 0px; text-align: right; font-size: 16px;"
+              "color: #fff; margin: 0px; text-align: right; font-size: 16px;"
             }
             medium={"text-align: left; margin: 40px 0 0 0"}
           >
@@ -112,8 +112,6 @@ const Content = styled.div`
 const Row = styled.div`
   display: flex;
 `;
-
-
 
 const Column = styled.div`
   margin-bottom: auto;
