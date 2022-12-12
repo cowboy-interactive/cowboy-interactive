@@ -10,11 +10,6 @@ export default function Contact() {
 
   return (
     <Container all={"align-items: center"}>
-      <Navbar
-        all={"height: 80px; width: 80vw; max-width: 1600px; "}
-        medium={"width: 90vw;"}
-      />
-
       <Section
         all={
           "margin: 130px 0 80px 0; width: 80vw; max-width: 1600px; align-items: center;"

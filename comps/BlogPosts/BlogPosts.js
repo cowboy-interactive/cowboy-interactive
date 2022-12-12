@@ -76,6 +76,7 @@ const Card = styled(motion.div)`
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  backdrop-filter: blur(50px);
   &:hover {
     box-shadow: 0px 4px 20px rgba(116, 69, 58, 0.5);
   }

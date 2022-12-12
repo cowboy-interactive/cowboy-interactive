@@ -7,6 +7,7 @@ import { H3 } from "./Text/H3";
 import { Text } from "./Text/Text";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Router, { withRouter } from "next/router";
 
 export const ContactForm = ({
   color,
@@ -18,6 +19,7 @@ export const ContactForm = ({
 }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [website, setWebsite] = useState("");
   const [message, setMessage] = useState("");
   const [wasSent, setWasSent] = useState("");
   const [showMessage, setShowMessage] = useState(false);
@@ -30,7 +32,12 @@ export const ContactForm = ({
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (validateEmail(email) && message.length > 0 && name.length > 0) {
+    if (
+      validateEmail(email) &&
+      website.length > 0 &&
+      message.length > 0 &&
+      name.length > 0
+    ) {
       emailjs
         .sendForm(
           "service_5tubv6h",
@@ -41,18 +48,31 @@ export const ContactForm = ({
         .then(
           (result) => {
             console.log(result.text);
-            setWasSent("Your message was sent!");
+            Router.push(
+              {
+                pathname: "/thankyou",
+                query: {
+                  name: name,
+                  email: email,
+                  website: website,
+                  message: message,
+                },
+              },
+              "/thankyou"
+            );
+            /*             setWasSent("Your message was sent!");
             setShowMessage(true);
             setMessage("");
             setName("");
             setEmail("");
+            setWebsite("");
             window.scrollTo({
               top: 0,
               behavior: "smooth",
             });
             setTimeout(() => {
               setShowMessage(false);
-            }, 1000);
+            }, 1000); */
           },
           (error) => {
             console.log(error.text);
@@ -131,8 +151,19 @@ export const ContactForm = ({
           <InputUI
             color={color}
             type="text"
+            name="website"
+            placeholder="Website URL or business name"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+
+          <H3>Message</H3>
+
+          <InputUI
+            color={color}
+            type="text"
             name="message"
-            placeholder="Your Website"
+            placeholder="Let us know what you would like to work on"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -193,6 +224,11 @@ const InputUI = styled.input`
   background: transparent;
   color: ${(props) => props.color.secondary};
   border-bottom: 1px solid ${(props) => props.color.secondary};
+  font-weight: 500;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
 `;
 
 const MessageSentUI = styled.div`

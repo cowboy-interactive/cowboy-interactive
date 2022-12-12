@@ -6,7 +6,6 @@ import { Text } from "../comps/Text/Text";
 import { Img } from "../comps/Img";
 import { H2 } from "../comps/Text/H2";
 import { themes } from "../utils/variables";
-import { H3 } from "../comps/Text/H3";
 import { Services } from "../comps/Services/Services";
 import { ContactForm } from "../comps/ContactForm";
 import { Checklist } from "../comps/Checklist/Checklist";
@@ -170,12 +169,6 @@ export default function Home({}) {
           small={"align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H3
-            all={`margin: 0 0 20px 0; maxWidth: 800px;`}
-            initial={{ opacity: 0 }}
-          >
-            Project Templates
-          </H3>
           <H2
             all={"margin: 0 0 60px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
