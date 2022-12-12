@@ -26,7 +26,7 @@ export const Scene = ({ scrollTop, position, windowSize }) => {
           fov={75}
           makeDefault
           rotation={[0, 0, 0]}
-          position={windowSize.width > 500 ? [0, 0, 0] : [0, 0, 10]}
+          position={windowSize.width > 500 ? [0, 0, 0] : [0, 0, 0]}
         />
         <ambientLight />
         <pointLight position={[-10, -10, 10]} />
