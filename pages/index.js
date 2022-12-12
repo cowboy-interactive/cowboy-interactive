@@ -31,17 +31,26 @@ export default function Home({}) {
         scrollTop={scrollTop}
         position={position}
       />
-      <Section all={"margin: 180px 0 80px 0;"} xsmall={"align-items: flex-start;"}>
+      <Section
+        all={"margin: 180px 0 80px 0;"}
+        small={"margin: 180px 0 40px 0;"}
+        xsmall={"align-items: flex-start;"}
+      >
         <Container
           all={"margin:0 40px 0 0;"}
           small={"margin:0 0 60px 0; align-items: center; text-align: center; "}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H1 initial={{ opacity: 0 }} all="max-width: 1000px;" large="max-width: 700px;" xsmall="max-width: 400px;">
+          <H1
+            initial={{ opacity: 0 }}
+            all="max-width: 1000px;"
+            large="max-width: 700px;"
+            xsmall="max-width: 400px;"
+          >
             Web Design and Development for your small business.
           </H1>
           <Text
-            all={"margin: 0 0 60px 0; max-width: 400px;"}
+            all={"margin: 0 0 40px 0; max-width: 350px;"}
             initial={{ opacity: 0 }}
           >
             We build, host and manage your custom website starting at $250 a
@@ -65,7 +74,6 @@ export default function Home({}) {
       <Section>
         <Container
           all={"align-items: center; text-align: center; "}
-          small={"margin-bottom: 60px;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
           <H2 initial={{ opacity: 0 }}>
@@ -73,12 +81,12 @@ export default function Home({}) {
             business.
           </H2>
           <Text
-            all={"margin: 0 0 60px 0; max-width: 550px;"}
+            all={"margin: 0 0 60px 0; max-width: 600px;"}
             initial={{ opacity: 0 }}
           >
-            We design and develop custom websites for small businesses. Our code is hand-written to ensure the best performance
-            possible, bringing more customers to your website and more revenue
-            to your business.
+            We design and develop custom websites for small businesses. Our code
+            is hand-written to ensure the best performance possible, bringing
+            more customers to your website and more revenue to your business.
           </Text>
           <Services initial={{ opacity: 0 }} />
         </Container>
@@ -140,7 +148,7 @@ export default function Home({}) {
           xsmall={"align-items: flex-start; text-align: left;"}
         >
           <H2
-            all={"margin: 0 0 60px 0; max-width: 500px;"}
+            all={"margin: 0 0 60px 0; max-width: 450px;"}
             initial={{ opacity: 0 }}
           >
             Choose a plan that fits your business needs

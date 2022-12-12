@@ -33,8 +33,8 @@ export const Text = ({
 
 const Cont = styled(motion.p)`
   font-size: 18px;
-  font-weight: 500;
-  line-height: 1.6;
+  font-weight: 450;
+  line-height: 1.65;
   color: ${(props) => props.color};
   
   ${(props) => props.all};

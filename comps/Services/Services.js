@@ -67,6 +67,8 @@ const Card = styled(motion.div)`
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(50px);
 
+
+
 `;
 
 const Column = styled.div`
@@ -77,6 +79,10 @@ const Column = styled.div`
   position: relative;
   z-index: 100;
   text-align: left;
-  padding: 0 40px 40px 40px;
+  padding: 0 60px 60px 60px;
   margin-top: -30px;
+
+  @media (max-width: ${sizes.small}) {
+    padding: 0 40px 40px 40px;
+  }
 `;

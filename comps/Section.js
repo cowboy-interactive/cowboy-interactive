@@ -31,6 +31,7 @@ const Cont = styled.section`
 
   @media (max-width: ${sizes.small}) {
     flex-direction: column;
+    margin: 60px 0;
 
     ${(props) => props.small};
   }
