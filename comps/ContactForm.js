@@ -108,10 +108,11 @@ export const ContactForm = ({
         transition={transition}
       >
         <ColumnUI>
-          <H2 all={"margin: 0 0 20px 0;"}>Get in touch.</H2>
-          <Text all={"max-width: 500px;"}>
-            Contact us to get a free audit of your current website. We will get
-            back to you as soon as we can!
+          <H2 all={"margin: 0 0 20px 0;"}>Get In Touch</H2>
+          <Text all={"max-width: 450px;"}>
+            Contact us for a free audit of your current website, or to get
+            started on a new one. We're here to help your business{"\u00A0"}grow
+            {"\u00A0"}online.
           </Text>
           {contact && (
             <ContactCard

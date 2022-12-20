@@ -1,12 +1,12 @@
 export const links = [
   {
     head: "Website Optimization",
-    text: `We make sure that your websites accessibility, performance and search engine standards are kept up to date. We do this to ensure that you are getting the most organic traffic${"\u00A0"}possible.`,
+    text: `We make sure that your website's accessibility, performance, and search engine standards are kept up to date. We do this to ensure that you are getting the most organic traffic${"\u00A0"}possible.`,
     image: "/images/cards.svg",
   },
   {
     head: "Web Design & Development",
-    text: `All of our designs are built in house. We provide full customization to fit your business needs. Designs are constantly updated so your website never goes out${"\u00A0"}of${"\u00A0"}date.`,
+    text: `All of our designs are built in-house. We provide full customization to fit your business needs. Designs are constantly updated so your website never goes out${"\u00A0"}of${"\u00A0"}date.`,
     image: "/images/horse.svg",
   },
   {

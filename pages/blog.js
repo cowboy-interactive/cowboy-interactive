@@ -37,7 +37,7 @@ export default function Home({ posts }) {
             "margin: 180px 0 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
           }
           medium={"width: 90vw; align-items: center;"}
-          small={"flex-direction: column;"}
+          small={"margin: 180px 0 40px 0;"}
         >
           <Container
             all={"align-items: space-between; "}
@@ -54,7 +54,8 @@ export default function Home({ posts }) {
               all={"margin: 0 0 60px 0; max-width: 800px;"}
               initial={{ opacity: 0 }}
             >
-              Learn how we can help you improve your website and reach more customers.
+              Learn how we can help you improve your website and reach more
+              customers.
             </H2>
             <BlogPosts posts={posts} />
           </Container>

@@ -46,14 +46,16 @@ export default function Home({}) {
             large="max-width: 700px;"
             xsmall="max-width: 400px;"
           >
-            Web Design and Development for your small business.
+            Web Design and Development for Your Small{"\u00A0"}Business
           </H1>
           <Text
-            all={"margin: 0 0 40px 0; max-width: 350px;"}
+            all={"margin: 0 0 40px 0; max-width: 550px;"}
             initial={{ opacity: 0 }}
           >
-            We build, host and manage your custom website starting at $250 a
-            month.
+            We offer custom web design and development services for small
+            businesses, starting at $250 per month. Our hand-written code
+            ensures the best performance for your website, bringing more
+            customers and revenue to{"\u00A0"}your{"\u00A0"}business.
           </Text>
           <Container
             all={"flex-direction: row"}
@@ -75,17 +77,15 @@ export default function Home({}) {
           all={"align-items: center; text-align: center; "}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H2 initial={{ opacity: 0 }}>
-            We take care of all your website needs, so you can focus on your
-            business.
-          </H2>
+          <H2 initial={{ opacity: 0 }}>Full-Service Website{"\u00A0"}Care</H2>
           <Text
-            all={"margin: 0 0 60px 0; max-width: 600px;"}
+            all={"margin: 0 0 60px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
           >
-            We design and develop custom websites for small businesses. Our code
-            is hand-written to ensure the best performance possible, bringing
-            more customers to your website and more revenue to your business.
+            Leave the design, development, and maintenance of your
+            website to us. We ensure that your site meets accessibility,
+            performance, and search engine standards, and we offer continuous
+            design updates to keep your{"\u00A0"}site{"\u00A0"}fresh.
           </Text>
           <Services initial={{ opacity: 0 }} />
         </Container>
@@ -99,18 +99,17 @@ export default function Home({}) {
           }
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H2 initial={{ opacity: 0 }}>
-            No sign up costs.
-            <br />
-            Just $250 a month.
+          <H2 all={"max-width: 400px;"} initial={{ opacity: 0 }}>
+            $250 per Month with No{"\u00A0"}Upfront{"\u00A0"}Costs
           </H2>
           <Text
             all={"margin: 0 0 60px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
           >
-            $0 down for a standard 5 page small business website. Everything you
-            need to grow your online presence. Cancel anytime with no fees or
-            hassle.
+            Sign up for our standard package for just $250 per month, with no
+            upfront costs. This includes hosting fees, design and development,
+            Google Analytics, and 7-day support. Need a custom plan? Contact us
+            for{"\u00A0"}more{"\u00A0"}information.
           </Text>
 
           <Checklist
@@ -150,7 +149,7 @@ export default function Home({}) {
             all={"margin: 0 0 60px 0; max-width: 450px;"}
             initial={{ opacity: 0 }}
           >
-            Choose a plan that fits your business needs
+            Choose a Plan that fits your{"\u00A0"}Business{"\u00A0"}needs
           </H2>
         </Container>
         <Plans />
@@ -169,12 +168,14 @@ export default function Home({}) {
           small={"align-items: center; text-align: center;"}
           xsmall={"align-items: flex-start; text-align: left;"}
         >
-          <H2
-            all={"margin: 0 0 60px 0; max-width: 500px;"}
+          <H2 initial={{ opacity: 0 }}>Custom Website Templates</H2>
+          <Text
+            all={"margin: 0 0 60px 0; max-width: 400px;"}
             initial={{ opacity: 0 }}
           >
-            Choose a starting point for your custom website.
-          </H2>
+            Need a starting point for your custom website? Check out our
+            pre-designed{"\u00A0"}templates.
+          </Text>
           <Templates />
         </Container>
       </Section>
