@@ -33,11 +33,9 @@ export default function Home({ posts }) {
     <>
       <Container all={"align-items: center"}>
         <Section
-          all={
-            "margin: 180px 0 100px 0; width: 80vw; max-width: 1600px; align-items: center;"
-          }
-          medium={"width: 90vw; align-items: center;"}
+          all={"margin: 180px 0 80px 0;"}
           small={"margin: 180px 0 40px 0;"}
+          xsmall={"align-items: flex-start;"}
         >
           <Container
             all={"align-items: space-between; "}
