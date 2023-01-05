@@ -46,16 +46,16 @@ export default function Home({}) {
             large="max-width: 700px;"
             xsmall="max-width: 400px;"
           >
-            Web Design and Development for Your Small{"\u00A0"}Business
+            Web Design and Development for Your{"\u00A0"}Business
           </H1>
           <Text
-            all={"margin: 0 0 40px 0; max-width: 550px;"}
+            all={"margin: 0 0 40px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
           >
-            We offer custom web design and development services for small
-            businesses, starting at $250 per month. Our hand-written code
-            ensures the best performance for your website, bringing more
-            customers and revenue to{"\u00A0"}your{"\u00A0"}business.
+            We offer custom web design and development services, starting at
+            $499 per month. Our hand-written code ensures the best performance
+            for your website, bringing more customers and revenue to{"\u00A0"}
+            your{"\u00A0"}business.
           </Text>
           <Container
             all={"flex-direction: row"}
@@ -82,10 +82,10 @@ export default function Home({}) {
             all={"margin: 0 0 60px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
           >
-            Leave the design, development, and maintenance of your
-            website to us. We ensure that your site meets accessibility,
-            performance, and search engine standards, and we offer continuous
-            design updates to keep your{"\u00A0"}site{"\u00A0"}fresh.
+            Leave the design, development, and maintenance of your website to
+            us. We ensure that your site meets accessibility, performance, and
+            search engine standards, and we offer continuous design updates to
+            keep your{"\u00A0"}site{"\u00A0"}fresh.
           </Text>
           <Services initial={{ opacity: 0 }} />
         </Container>
@@ -100,13 +100,13 @@ export default function Home({}) {
           xsmall={"align-items: flex-start; text-align: left;"}
         >
           <H2 all={"max-width: 400px;"} initial={{ opacity: 0 }}>
-            $250 per Month with No{"\u00A0"}Upfront{"\u00A0"}Costs
+            $499 per Month with No{"\u00A0"}Upfront{"\u00A0"}Costs
           </H2>
           <Text
             all={"margin: 0 0 60px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
           >
-            Sign up for our standard package for just $250 per month, with no
+            Sign up for our standard package for just $499 per month, with no
             upfront costs. This includes hosting fees, design and development,
             Google Analytics, and 7-day support. Need a custom plan? Contact us
             for{"\u00A0"}more{"\u00A0"}information.

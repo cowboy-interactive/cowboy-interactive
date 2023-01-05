@@ -25,8 +25,7 @@ export const Footer = ({ all, large, medium, small }) => {
             <Link href="/">Cowboy Interactive</Link>
           </LogoUI>
           <Text all={"color: #fff; max-width: 550px; margin: 0 0 40px 0; font-weight: 400;"}>
-            We offer custom web design and development services for small
-            businesses, starting at $250 per month. Our hand{"\u2011"}written code
+            We offer custom web design and development services, starting at $499 per month. Our hand{"\u2011"}written code
             ensures the best performance for your website, bringing more
             customers and revenue to{"\u00A0"}your{"\u00A0"}business.
           </Text>
