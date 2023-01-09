@@ -12,7 +12,7 @@ import {
 export const links = [
   {
     head: "Standard",
-    price: "$499",
+    price: "$250",
     text: (
       <span>
         Our standard 5 page website. <br /> Let us take care of your website,

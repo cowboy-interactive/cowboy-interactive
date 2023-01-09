@@ -53,7 +53,7 @@ export default function Home({}) {
             initial={{ opacity: 0 }}
           >
             We offer custom web design and development services, starting at
-            $499 per month. Our hand-written code ensures the best performance
+            $250 per month. Our hand-written code ensures the best performance
             for your website, bringing more customers and revenue to{"\u00A0"}
             your{"\u00A0"}business.
           </Text>
@@ -100,13 +100,13 @@ export default function Home({}) {
           xsmall={"align-items: flex-start; text-align: left;"}
         >
           <H2 all={"max-width: 400px;"} initial={{ opacity: 0 }}>
-            $499 per Month with No{"\u00A0"}Upfront{"\u00A0"}Costs
+            $250 per Month with No{"\u00A0"}Upfront{"\u00A0"}Costs
           </H2>
           <Text
             all={"margin: 0 0 60px 0; max-width: 500px;"}
             initial={{ opacity: 0 }}
           >
-            Sign up for our standard package for just $499 per month, with no
+            Sign up for our standard package for just $250 per month, with no
             upfront costs. This includes hosting fees, design and development,
             Google Analytics, and 7-day support. Need a custom plan? Contact us
             for{"\u00A0"}more{"\u00A0"}information.
