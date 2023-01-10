@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppProvider>
       <Head>
-        <title>Cowboy Interactive | Custom Web Development and Design</title>
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}

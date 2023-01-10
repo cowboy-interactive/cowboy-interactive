@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import { BlogPosts } from "../comps/BlogPosts/BlogPosts";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const files = fs.readdirSync("posts");
@@ -31,6 +32,18 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <>
+      <Head>
+        <title>Blog | Cowboy Interactive</title>
+        <meta
+          property="og:title"
+          content="Blog | Cowboy Interactive"
+          key="title"
+        />
+        <meta
+          name="description"
+          content="Learn how custom web design and development can help your small business website. From search engine optimization to Google Analytics, Cowboy Interactive has got you covered."
+        ></meta>
+      </Head>
       <Container all={"align-items: center"}>
         <Section
           all={"margin: 180px 0 80px 0;"}
