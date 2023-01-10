@@ -1,6 +1,6 @@
 ---
 title: 'An introduction to SEO for web development'
-metaTitle: 'Cowboy Interactive - An introduction to SEO for web development"
+metaTitle: 'Cowboy Interactive - An introduction to SEO for web development'
 description: 'An introduction to SEO for web development'
 image: /images/blog/an-introduction-to-seo-for-web-development.png
 date: '2022-12-12'

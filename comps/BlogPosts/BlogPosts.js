@@ -18,7 +18,9 @@ export const BlogPosts = ({
   posts,
 }) => {
   const formatSmallImage = (x) => {
-    return x.slice(0, -4) + "-small.png";
+    if (x) {
+      return x.slice(0, -4) + '-small.png';
+    }
   };
 
   return (
