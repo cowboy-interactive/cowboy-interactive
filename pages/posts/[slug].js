@@ -8,6 +8,7 @@ import { Section } from "../../comps/Section";
 import { H1 } from "../../comps/Text/H1";
 import { themes } from "../../utils/variables";
 import { H3 } from "../../comps/Text/H3";
+import Head from "next/head";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync("posts");
