@@ -44,10 +44,10 @@ export default function PostPage({ frontmatter, content }) {
   return (
     <>
       <Head>
-        <title>Cowboy Interactive - {frontmatter.title}</title>
+        <title>{frontmatter.metaTitle}</title>
         <meta
           property="og:title"
-          content={`Cowboy Interactive - ${frontmatter.title}`}
+          content={frontmatter.metaTitle}
           key="title"
         />
         <meta

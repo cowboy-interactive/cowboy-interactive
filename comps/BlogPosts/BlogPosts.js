@@ -24,7 +24,7 @@ export const BlogPosts = ({
   return (
     <Cont all={all} large={large} medium={medium} small={small}>
       {posts.reverse().map(({ slug, frontmatter }) => (
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blog/${slug}`} key={slug}>
           <Card
             href={frontmatter.url}
             target={frontmatter.target}

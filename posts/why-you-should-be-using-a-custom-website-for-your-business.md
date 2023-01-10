@@ -1,5 +1,6 @@
 ---
 title: 'Why you should be using a custom website for your business'
+metaTitle: 'Cowboy Interactive - Why you should be using a custom website for your business'
 description: 'Learn why you should be using a custom website for your business!'
 image: /images/blog/why-you-should-be-using-a-custom-website-for-your-business.png
 date: '2022-11-20'

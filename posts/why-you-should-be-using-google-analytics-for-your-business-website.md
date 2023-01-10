@@ -1,11 +1,9 @@
 ---
-title: 'Why you should be using google analytics for your business website'
-metaTitle: 'All about google analytics'
+title: 'Why you should be using Google Analytics for your business website'
+metaTitle: 'Cowboy Interactive - All about google analytics'
 description: 'All about google analytics'
-image: /images/blog/render-2.png
+image: /images/blog/why-you-should-be-using-google-analytics-for-your-business-website.png
 date: '2022-11-28'
-tags:
-  - nextjs
 ---
 
 Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. It can be used to measure sales and conversion rates, track how users interact with your website, and much more. Google Analytics is one of the most popular web analytics services on the market, used by millions of website owners and operators. While it offers a wealth of features and functionality, it can also be complex and challenging to understand. However, with a little time and effort, anyone can learn how to use Google Analytics to improve their website.

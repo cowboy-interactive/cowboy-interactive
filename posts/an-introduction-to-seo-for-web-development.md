@@ -1,11 +1,9 @@
 ---
 title: 'An introduction to SEO for web development'
-metaTitle: 'An introduction to SEO for web development'
+metaTitle: 'Cowboy Interactive - An introduction to SEO for web development"
 description: 'An introduction to SEO for web development'
-image: /images/blog/render-3.png
+image: /images/blog/an-introduction-to-seo-for-web-development.png
 date: '2022-12-12'
-tags:
-  - nextjs
 ---
 
 As a web developer, it's important to understand how search engine optimization (SEO) works so that you can create websites that rank high in search engine results pages (SERPs). In this guide, we will discuss the basics of SEO and how you can apply it to your web development projects. We'll also cover some advanced techniques that can help you improve your website's ranking. So whether you're just getting started with SEO or you're looking for ways to take your efforts to the next level, this guide is for you!
