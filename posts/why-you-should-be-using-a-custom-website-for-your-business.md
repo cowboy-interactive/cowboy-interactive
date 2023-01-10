@@ -1,11 +1,8 @@
 ---
-title: '5 reasons why you should be using a custom website for your business'
-metaTitle: '5 reasons why you should be using a custom website for your business'
-description: '5 reasons why you should be using a custom website for your business'
-image: /images/blog/render-1.png
+title: 'Why you should be using a custom website for your business'
+description: 'Learn why you should be using a custom website for your business!'
+image: /images/blog/why-you-should-be-using-a-custom-website-for-your-business.png
 date: '2022-11-20'
-tags:
-  - nextjs
 ---
 
 A custom website is a website that is specifically designed for a business or individual. Custom websites are made from scratch, meaning that they are not based on pre-made templates like website builders. This allows businesses to have full control over their website’s design, layout, and content. Custom websites are also more flexible than website builders, as they can be easily updated and expanded as needed. Additionally, custom websites are often more successful than website builder sites, as they are designed with search engine optimization (SEO) in mind. This means that custom websites are more likely to show up in online searches, driving more traffic to the site. Ultimately, a custom website is a better choice for businesses and individuals who want complete control over their online presence.

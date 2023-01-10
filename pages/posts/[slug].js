@@ -41,41 +41,54 @@ const toDate = (dateStr) => {
 
 export default function PostPage({ frontmatter, content }) {
   return (
-    <Container all={"align-items: center"}>
-      <Section
-        all={
-          "margin: 180px 0 40px 0; width: 50vw; max-width: 1600px; align-items: center; flex-direction: column;"
-        }
-        medium={"width: 90vw; align-items: center; flex-direction: column;"}
-        small={"width: 90vw;"}
-      >
-        <H1>
-          {frontmatter.title}{" "}
-          <H3 all={"margin: 20px 0 0 0"}>{frontmatter.date}</H3>
-        </H1>
-
-        <Img
-          src={frontmatter.image}
-          alt="western town illustration"
-          initial={{ opacity: 0 }}
-          width={300}
-          height={300}
+    <>
+      <Head>
+        <title>Cowboy Interactive - Custom Web Development and Design</title>
+        <meta
+          property="og:title"
+          content={`Cowboy Interactive - ${frontmatter.title}`}
+          key="title"
         />
-      </Section>
-      <Section
-        all={"margin: 0px 0 100px 0; width: 50vw; flex-direction: column;"}
-        xsmall={"align-items: flex-start; text-align: left;"}
-
-      >
-        <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-        <Button
-          href={"/contact"}
-          all={`background: ${themes.button}; color: #fff; border: none; margin: 60px 0 0 0;`}
-          initial={{ opacity: 0 }}
+        <meta
+          name="description"
+          content={frontmatter.description}
+        ></meta>
+      </Head>
+      <Container all={"align-items: center"}>
+        <Section
+          all={
+            "margin: 180px 0 40px 0; width: 50vw; max-width: 1600px; align-items: center; flex-direction: column;"
+          }
+          medium={"width: 90vw; align-items: center; flex-direction: column;"}
+          small={"width: 90vw;"}
         >
-          Get a Free Quote
-        </Button>
-      </Section>
-    </Container>
+          <H1>
+            {frontmatter.title}{" "}
+            <H3 all={"margin: 20px 0 0 0"}>{frontmatter.date}</H3>
+          </H1>
+
+          <Img
+            src={frontmatter.image}
+            alt="western town illustration"
+            initial={{ opacity: 0 }}
+            width={300}
+            height={300}
+          />
+        </Section>
+        <Section
+          all={"margin: 0px 0 100px 0; width: 50vw; flex-direction: column;"}
+          xsmall={"align-items: flex-start; text-align: left;"}
+        >
+          <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+          <Button
+            href={"/contact"}
+            all={`background: ${themes.button}; color: #fff; border: none; margin: 60px 0 0 0;`}
+            initial={{ opacity: 0 }}
+          >
+            Get a Free Quote
+          </Button>
+        </Section>
+      </Container>
+    </>
   );
 }
