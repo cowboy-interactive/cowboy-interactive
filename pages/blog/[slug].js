@@ -44,7 +44,7 @@ export default function PostPage({ frontmatter, content }) {
   return (
     <>
       <Head>
-        <title>Cowboy Interactive - Custom Web Development and Design</title>
+        <title>Cowboy Interactive - {frontmatter.title}</title>
         <meta
           property="og:title"
           content={`Cowboy Interactive - ${frontmatter.title}`}
