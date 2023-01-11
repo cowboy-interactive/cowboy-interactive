@@ -9,7 +9,7 @@ export const Section = ({ children, all, large, medium, small, xsmall }) => {
   );
 };
 
-const Cont = styled.section`
+const Cont = styled.article`
   display: flex;
   justify-content: space-between;
   width: 80vw;

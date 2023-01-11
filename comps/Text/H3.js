@@ -32,7 +32,7 @@ export const H3 = ({
   );
 };
 
-const Cont = styled(motion.div)`
+const Cont = styled(motion.h3)`
   font-size: 20px;
   font-weight: 700;
   color: ${({color}) => color}

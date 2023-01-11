@@ -120,7 +120,7 @@ export const Navbar = ({ all, large, medium, small }) => {
   );
 };
 
-const Cont = styled.div`
+const Cont = styled.header`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -133,7 +133,7 @@ const Cont = styled.div`
   box-shadow: ${({ boxShadow }) => boxShadow};
 `;
 
-const NavbarUI = styled.div`
+const NavbarUI = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-between;

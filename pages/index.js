@@ -25,7 +25,7 @@ export default function Home({}) {
   const [position] = useState({ x: 0, y: 0 });
 
   return (
-    <>
+    <main>
       <Head>
         <title>Cowboy Interactive - Custom Web Development and Design</title>
         <meta
@@ -200,6 +200,6 @@ export default function Home({}) {
           <ContactForm color={themes[theme]} />
         </Section>
       </Container>
-    </>
+    </main>
   );
 }

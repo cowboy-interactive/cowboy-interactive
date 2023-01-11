@@ -31,7 +31,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts }) {
   return (
-    <>
+    <main>
       <Head>
         <title>Blog | Cowboy Interactive</title>
         <meta
@@ -72,6 +72,6 @@ export default function Home({ posts }) {
           </Container>
         </Section>
       </Container>
-    </>
+    </main>
   );
 }

@@ -11,7 +11,7 @@ import Router, { withRouter } from "next/router";
 
 export const ContactForm = ({
   color,
-  contact = false,
+  contact = true,
   initial = { opacity: 0 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
@@ -109,7 +109,7 @@ export const ContactForm = ({
       >
         <ColumnUI>
           <H2 all={"margin: 0 0 20px 0;"}>Get In Touch</H2>
-          <Text all={"max-width: 450px;"}>
+          <Text all={"max-width: 450px; margin: 0 0 40px 0;"}>
             Contact us for a free audit of your current website, or to get
             started on a new one. We're here to help your business{"\u00A0"}grow
             {"\u00A0"}online.

@@ -81,7 +81,7 @@ export const Footer = ({ all, large, medium, small }) => {
   );
 };
 
-const Cont = styled.div`
+const Cont = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
