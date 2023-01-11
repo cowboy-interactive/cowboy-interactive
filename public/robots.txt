@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.cowboyinteractive.com/
+
+# Sitemaps
+Sitemap: https://www.cowboyinteractive.com/sitemap.xml

@@ -1,6 +1,6 @@
 {
-  "name": "cowboy_interactive_contractor_pro",
-  "short_name": "contractor_pro",
+  "name": "cowboy_interactive",
+  "short_name": "cowboy_interactive",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#90cdf4",

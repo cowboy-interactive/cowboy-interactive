@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@react-three/drei": "^9.32.1",
@@ -17,6 +18,7 @@
     "lerp": "^1.0.3",
     "markdown-it": "^13.0.1",
     "next": "12.3.0",
+    "next-sitemap": "^3.1.45",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "^2.0.10",
